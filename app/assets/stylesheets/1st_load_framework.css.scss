@@ -90,3 +90,16 @@ section {
   @extend .radius;
   @extend .tiny;
 }
+.alert-box {
+  margin-top: 15px;
+} 
+.alert-box.alert {
+  background-color: #F2DEDE;
+  color: #A94442;
+  border-color: #EBCCD1;
+}
+.alert-box.success {
+  background-color: #DFF0D8;
+  color: #3C763D;
+  border-color: #D6E9C6;
+}
