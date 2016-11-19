@@ -25,6 +25,7 @@ So far I have created the base application and added a style sheet. The applicat
 
 Todo
 -------------
+Next step: Decide how you want to build the models for assets. The way it was done in Firecall feels like it smells. Do a little more research on "composition".
 
 Issues
 -------------
