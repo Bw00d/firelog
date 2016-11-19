@@ -1,2 +1,13 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<%= content_for :title, "Home" %>
+<div  class="row">
+	<header id="title">
+		<h1>Firelog</h1>
+	</header>
+		<div id="home-message" class="small-12 medium-8 large-8 columns medium-centered large-centered ">
+			<h4>Wildland Fire Asset Management</h4>
+			
+		</div>
+		<div class="wide-button" >
+			<%= link_to "SIGNUP", new_user_registration_path, class: "button radius" %>
+		</div>
+</div>
