@@ -1,13 +1,22 @@
 <%= content_for :title, "Home" %>
-<div  class="row">
-	<div class="small-12 medium-8 large-8 columns small-centered">
-	<header id="title">
-		<h1>Firelog</h1>
-			<h4>Tracking My Burn Rate</h4>
-	</header>
-		<div id="home-message" class="small-12 medium-8 large-8 columns medium-centered large-centered ">
+<% unless signed_in? %>
+	<div  class="row">
+		<div class="small-12 medium-8 large-8 columns small-centered">
+		<header id="title">
+			<h1>Firelog</h1>
+				<h4>Track My Burn Rate</h4>
+		</header>
+			<div id="home-message" class="small-12 medium-8 large-8 columns medium-centered large-centered ">
+				<%= link_to "Get Started", new_user_registration_path, class: "button success radius" %>
+			</div>
+
+		</div>
+	</div>
+<% else %>
+	<div id="add-expense" class="row">
+		<div class="small-12 medium-8 large-8 columns small-centered">
+			<div class="add-button"><%= link_to "+", 'javascript:;' %><br><span class="subtext">Add</span></div>
 			
 		</div>
-
 	</div>
-</div>
+<% end %>
