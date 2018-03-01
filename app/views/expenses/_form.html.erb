@@ -20,9 +20,9 @@
     <%= f.text_field :amount %>
   </div>
   <div class="small-12 small-centered columns field">
-    <%= f.label "Category" %>
-    <%= f.number_field :category_id %>
+    <%= f.collection_select(:category_id, Category.all, :id, :description, { prompt: "CATEGORY" })  %>
   </div>
+
   
   <div class="small-12 small-centered columns field">
     <%= f.label "Vendor" %>
