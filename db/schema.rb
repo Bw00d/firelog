@@ -16,13 +16,14 @@ ActiveRecord::Schema.define(version: 20180301005335) do
   enable_extension "plpgsql"
 
   create_table "expenses", force: :cascade do |t|
-    t.decimal  "amount",     precision: 8, scale: 2
+    t.decimal  "amount",      precision: 8, scale: 2
     t.date     "date"
-    t.integer  "category"
-    t.integer  "vendor"
+    t.integer  "category_id"
+    t.integer  "vendor_id"
+    t.integer  "user_id"
     t.text     "comment"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "users", force: :cascade do |t|
