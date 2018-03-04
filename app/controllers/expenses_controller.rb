@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
   # GET /expenses.json
   def index
     @expense = Expense.new
-    @expenses = Expense.all
+    @expenses = Expense.all.order("date ASC")
   end
 
   # GET /expenses/1
@@ -25,7 +25,7 @@ class ExpensesController < ApplicationController
   # POST /expenses
   # POST /expenses.json
   def create
-    @expense = Expense.new(expense_params).merge({user_id: current_user.id})
+    @expense = Expense.new(expense_params.merge({user_id: current_user.id}))
 
     respond_to do |format|
       if @expense.save
