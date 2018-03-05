@@ -44,15 +44,12 @@ $successGreen: #48AB6C;
     }
     margin-bottom: 10px;
 }
+
 #category-buttons {
     display: relative;
     display: block;
     overflow: hidden;
-}
-#category-buttons {
-    display: relative;
-    display: block;
-    overflow: hidden;
+    min-height: 65px;
 }
 .unselected {
     display: none;
@@ -68,13 +65,16 @@ span.hidden-id {
     float: left;
     margin: 0;
     display: none;
+    margin-top: -170px;
+    margin-left: 15px;
+    position: absolute;
+    margin-bottom: 0;
 }
 #add-cat {
-    margin-top: -52px;
+    margin-top: -36px;
     margin-left: 314px;
     position: absolute;
-    padding-bottom: 7px;
-
+    padding-bottom: 5px;
     font-size: 2em;
     display: inline;
     text-align: center;
@@ -87,13 +87,17 @@ span.hidden-id {
     border: 2px solid $successGreen;
     color: $successGreen;
     font-weight: 300;
-    line-height: .75em;
+    line-height: .60em;
 }
 input#category-input {
     // border: 2px solid $successGreen;
     moz-border-radius: 40px/40px;
     -webkit-border-radius: 40px 40px;
     border-radius: 40px/40px;
-    display: inline-block;
+    display: block;
+    margin-bottom: 0;
 }
+#vendor-buttons {
+}
+
 

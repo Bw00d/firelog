@@ -6,7 +6,7 @@ class ExpensesController < ApplicationController
   def index
     @expense = Expense.new
     @expenses = Expense.all.order("date ASC")
-    @categories = Category.all
+    @categories = current_user.categories
     @category = Category.new
   end
 
@@ -31,7 +31,7 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to :back }
+        format.html { render :show }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :index }

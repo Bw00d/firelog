@@ -24,14 +24,15 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
-    @category = Category.new(category_params)
+    @user = current_user
+    @category = Category.create(category_params.merge({ user_id: @user.id }))
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
+        format.html { redirect_to :back }
         format.json { render :show, status: :created, location: @category }
       else
-        format.html { render :new }
+        format.html { redirect_to :back, alert: "Oops, you alread have that category" }
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end
@@ -69,6 +70,6 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:description)
+      params.require(:category).permit(:description, :user_id)
     end
 end
