@@ -44,16 +44,6 @@
   </div>
 <% end %>
 
-<!-- category-form -->
-<div id="category-form">
-  <%= form_for @category do |f| %>
-    <% if @category.errors.any? %>
-      <div id="error_explanation">
-        Oops, try again!
-      </div>
-    <% end %>
-    <%= f.text_field :description, id: "category-input" %>
-    <%= f.submit "+", id: "add-cat" %>
-  <% end %>
-</div>
-<!-- category-form -->
+<%= render 'category_form' %>
+<%= render 'vendor_form' %>
+

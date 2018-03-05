@@ -1,0 +1,13 @@
+_category_form.html.erb<!-- category-form -->
+<div id="category-form">
+  <%= form_for @category do |f| %>
+    <% if @category.errors.any? %>
+      <div id="error_explanation">
+        Oops, try again!
+      </div>
+    <% end %>
+    <%= f.text_field :description, id: "category-input" %>
+    <%= f.submit "+", id: "add-cat" %>
+  <% end %>
+</div>
+<!-- category-form -->
