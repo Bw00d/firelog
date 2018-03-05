@@ -28,11 +28,6 @@ $successGreen: #48AB6C;
 	margin-top: 2%;
 }
 
-.expense {
-}
-.expense-amount {
-    text-align: right;
-}
 .category-button {
     background: #D2D2D2;
     -moz-border-radius: 40px/40px;
@@ -92,7 +87,6 @@ span.hidden-id {
     line-height: .60em;
 }
 input#category-input {
-    // border: 2px solid $successGreen;
     moz-border-radius: 40px/40px;
     -webkit-border-radius: 40px 40px;
     border-radius: 40px/40px;
@@ -102,4 +96,14 @@ input#category-input {
 #vendor-buttons {
 }
 
+// display expenses
 
+#expenses-list {
+
+}
+.expense {
+    font-size: .75em;
+}
+.expense-amount {
+    text-align: right;
+}
