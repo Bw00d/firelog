@@ -23,7 +23,6 @@
     <%= f.label :category_id, "Category" %>
     <%= f.hidden_field :category_id, value: @expense.category_id  %>
     <% @categories.each do |category| %>
-    <div class="buttress-35"></div>
       <div class="category-button">
         <%= link_to category.description, 'javascript:;' %>
         <span class="hidden-id"><%= category.id %></span>
