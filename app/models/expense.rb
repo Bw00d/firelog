@@ -1,5 +1,6 @@
 class Expense < ApplicationRecord
 
+has_one :category
 	def category
 		Category.find(self.category_id).description
 	end

@@ -19,12 +19,36 @@
     <%= f.label :amount %>
     <%= f.text_field :amount %>
   </div>
-  <div class="small-12 small-centered columns field">
-    <%= f.collection_select(:category_id, Category.all, :id, :description, { prompt: "CATEGORY" })  %>
+  <div id="category-buttons" class="small-12 small-centered columns field">
+    <%= f.label :category_id, "Category" %>
+    <%= f.hidden_field :category_id, value: @expense.category_id  %>
+    <% @categories.each do |category| %>
+      <div class="category-button">
+        <%= link_to category.description, 'javascript:;' %>
+        <span class="hidden-id"><%= category.id %></span>
+      </div>
+      <% end %>
+    <div class="add-category-button"><%= link_to "+", expenses_path %></div>
+
+<!-- category-form -->
+<div id="category-form">
+  <%= form_for(@category) do |f| %>
+    <% if @category.errors.any? %>
+      <div id="error_explanation">
+        Oops, try again!
+      </div>
+    <% end %>
+    <%= f.text_field :description, id: "category-input" %>
+    <%= f.submit "+", id: "add-cat" %>
+  <% end %>
+</div>
+<!-- category-form -->
   </div>
 
+
+
   
-  <div class="small-12 small-centered columns field">
+  <div id="vendor-buttons" class="small-12 small-centered columns field">
     <%= f.label "Vendor" %>
     <%= f.text_field :vendor_id %>
   </div>

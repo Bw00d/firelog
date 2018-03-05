@@ -10,9 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require foundation-datepicker
  *= require font-awesome
+ *= require selectize
+ *= require selectize.default
+ *= require_tree .
  *= require_self
  */
 

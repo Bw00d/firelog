@@ -6,6 +6,8 @@ class ExpensesController < ApplicationController
   def index
     @expense = Expense.new
     @expenses = Expense.all.order("date ASC")
+    @categories = Category.all
+    @category = Category.new
   end
 
   # GET /expenses/1

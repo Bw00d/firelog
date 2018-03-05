@@ -1,26 +1,28 @@
 $successGreen: #48AB6C;
-.add-button {
-		font-size: 2em;
-		display: inline;
-		text-align: center;
-		-moz-border-radius: 40px/40px;
-    -webkit-border-radius: 40px 40px;
-    border-radius: 40px/40px; 
-    width:40px;
-    height:40px;
+.add-category-button {
+    margin-right: 10px;
+	font-size: 2em;
+	display: inline;
+	text-align: center;
+	-moz-border-radius: 35px/35px;
+    -webkit-border-radius: 35px 35px;
+    border-radius: 35px/35px; 
+    width:35px;
+    height:35px;
     display: inline-block;
     border: 2px solid $successGreen;
-    background: $successGreen;
+    // background: $successGreen;
     color: $successGreen;
-    float: right;
+    float: left;
+    clear: all;
     
     a {
-    	color: white;
+    	color: $successGreen;
     }
 		span.subtext {
 			font-size: .5em !important;
 		}
-		line-height: 1em;
+		line-height: .80em;
   }
 #add-expense {
 	margin-top: 2%;
@@ -28,5 +30,70 @@ $successGreen: #48AB6C;
 
 .expense {
  background: yellow;
+}
+.category-button {
+    background: #D2D2D2;
+    -moz-border-radius: 40px/40px;
+    -webkit-border-radius: 40px 40px;
+    border-radius: 40px/40px;
+    padding: 5px 15px; 
+    float: left;
+    margin-right: 10px;
+    a {
+        color: black;
+    }
+    margin-bottom: 10px;
+}
+#category-buttons {
+    display: relative;
+    display: block;
+    overflow: hidden;
+}
+#category-buttons {
+    display: relative;
+    display: block;
+    overflow: hidden;
+}
+.unselected {
+    display: none;
+}
+span.hidden-id {
+    display: none;
+}
+// category form
+#category-form {
+    background: white;
+    padding: 0px;
+    width: 350px;
+    float: left;
+    margin: 0;
+    display: none;
+}
+#add-cat {
+    margin-top: -52px;
+    margin-left: 314px;
+    position: absolute;
+    padding-bottom: 7px;
+
+    font-size: 2em;
+    display: inline;
+    text-align: center;
+    -moz-border-radius: 35px/35px;
+    -webkit-border-radius: 35px 35px;
+    border-radius: 35px/35px; 
+    width:35px;
+    height:35px;
+    display: inline-block;
+    border: 2px solid $successGreen;
+    color: $successGreen;
+    font-weight: 300;
+    line-height: .75em;
+}
+input#category-input {
+    // border: 2px solid $successGreen;
+    moz-border-radius: 40px/40px;
+    -webkit-border-radius: 40px 40px;
+    border-radius: 40px/40px;
+    display: inline-block;
 }
 
