@@ -6,7 +6,9 @@ class ExpensesController < ApplicationController
   def index
     @expense = Expense.new
     @expenses = Expense.all.order("date ASC")
-    @categories = current_user.categories
+    if current_user
+      @categories = current_user.categories
+    end
     @category = Category.new
   end
 
