@@ -2,13 +2,50 @@
 @import "foundation";
 
 // override for the 'Home' navigation link
+.top-bar {
+  height: 4rem;
+  background-color: #35A9E3;
+
+}
+
+
+.top-bar-section li a:not(.button) {
+    background: #35A9E3 !important;   
+}
+
+.top-bar-section li a:not(.button):hover {
+    background: #35A9E3 !important;   
+}
+
+.top-bar-section ul li.active > a {
+    background: #35A9E3 !important;   
+}
+
+.top-bar-section ul li.active > a:hover {
+    background: #35A9E3 !important;   
+}
+
+.top-bar-section{
+  li {
+  background-color: #35A9E3;
+    
+  }
+  padding-top: 11px;
+
+}
 .top-bar .name {
-  font-size: rem-calc(13);
-  line-height: 45px; }
+  font-weight: bolder;
+  font-size: rem-calc(30);
+  line-height: 65px; 
+  letter-spacing: 2px;
+}
 .top-bar .name a {
-  font-weight: normal;
-  color: white;
+  color: white !important;
   padding: 0 15px; }
+
+  .top-bar .toggle-topbar.menu-icon a {
+    padding: 3rem 2.5rem 0 0.9375rem;
+  }
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create mixins using Foundation classes

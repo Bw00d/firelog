@@ -6,8 +6,8 @@
         Oops, try again!
       </div>
     <% end %>
-    <%= f.text_field :description, id: "category-input" %>
-    <%= f.submit "+", id: "add-cat" %>
+    <%= f.text_field :description, id: "category-input",:autofocus => true %>
+    <%= f.submit "Add", id: "add-cat", class: 'button' %>
   <% end %>
 </div>
 <!-- category-form -->

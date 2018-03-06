@@ -1,5 +1,6 @@
 class Expense < ApplicationRecord
-
+validates :date, presence: :true
+validates :category_id, presence: :true
 has_one :category
 	def category
 		Category.find(self.category_id).description

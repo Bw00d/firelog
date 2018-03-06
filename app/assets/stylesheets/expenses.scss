@@ -72,6 +72,9 @@ span.hidden-id {
     margin-left: 314px;
     position: absolute;
     padding-bottom: 5px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 5px;
     font-size: 2em;
     display: inline;
     text-align: center;
@@ -81,10 +84,12 @@ span.hidden-id {
     width:35px;
     height:35px;
     display: inline-block;
-    border: 2px solid $successGreen;
-    color: $successGreen;
-    font-weight: 300;
+    // border: 2px solid $successGreen;
+    // color: black;
+    // background: #D2D2D2;
+    // font-weight: 700;
     line-height: .60em;
+    font-size: .7em;
 }
 input#category-input {
     moz-border-radius: 40px/40px;

@@ -15,24 +15,23 @@
 <% else %>
 
 
-<p id="notice"><%= notice %></p>
-
+<p></p>
 <%= render 'form' %>
 
-<h6>Expenses</h6>
 
-<div id="expenses-list">
-    <% @expenses.each do |expense| %>
-      <% if expense.date? %>
-        <div class="expense small-4 large-2 medium-2 columns"><%= expense.date.strftime('%-m/%d/%y') %></div>
-      <% end %>
-      <% if expense.category_id %>
-      <div class="expense small-4 large-3 medium-3 columns"><%= expense.category %></div>
-      <% end %>
-      <div class="expense small-3 large-3 medium-3 columns show-for-medium-up">Vendor</div>
-      <div class="expense small-3 large-2 medium-2 columns show-for-medium-up">Cash</div>
-      <div class="expense-amount expense small-4 medium-2 large-2 columns"><%= number_to_currency(expense.amount) %></div>
+<div id="expenses-list" class="small-12 small-centered columns">
+  <h6>Expenses</h6>
+  <% @expenses.each do |expense| %>
+    <% if expense.date? %>
+      <div class="expense small-4 large-2 medium-2 columns"><%= expense.date.strftime('%-m/%d/%y') %></div>
     <% end %>
+    <% if expense.category_id %>
+    <div class="expense small-4 large-3 medium-3 columns"><%= expense.category %></div>
+    <% end %>
+    <div class="expense small-3 large-3 medium-3 columns show-for-medium-up">Vendor</div>
+    <div class="expense small-3 large-2 medium-2 columns show-for-medium-up">Cash</div>
+    <div class="expense-amount expense small-4 medium-2 large-2 columns"><%= number_to_currency(expense.amount) %></div>
+  <% end %>
 </div>
 
 <% end %>
