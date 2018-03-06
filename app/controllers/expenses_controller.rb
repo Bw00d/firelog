@@ -8,6 +8,8 @@ class ExpensesController < ApplicationController
     @expenses = Expense.all.order("date ASC")
     if current_user
       @categories = current_user.categories
+    else
+      @categories = []
     end
     @category = Category.new
   end
@@ -36,7 +38,7 @@ class ExpensesController < ApplicationController
         format.html { redirect_to :back }
         format.json { redirect_to :back, status: :created, location: @expense }
       else
-        format.html { render :index }
+        format.html { redirect_to :back, alert: "Oops, try that again. Choose date, amount, and category." }
         format.json { render json: @expense.errors, status: :unprocessable_entity }
       end
     end
