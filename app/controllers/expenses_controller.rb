@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
   # GET /expenses.json
   def index
     @expense = Expense.new
-    @expenses = Expense.all.order("date ASC")
+    @expenses = Expense.all.order("date DESC")
     if current_user
       @categories = current_user.categories
     else
