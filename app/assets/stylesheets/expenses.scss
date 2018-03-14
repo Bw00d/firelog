@@ -54,6 +54,10 @@ $successGreen: #48AB6C;
 span.hidden-id {
     display: none;
 }
+
+#add-comment {
+    display: none;
+}
 // category form
 #category-form {
     background: white;
@@ -112,3 +116,4 @@ input#category-input {
 .expense-amount {
     text-align: right;
 }
+

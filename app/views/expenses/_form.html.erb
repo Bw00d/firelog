@@ -19,18 +19,18 @@
       </div>
       <% end %>
     <div class="add-category-button"><%= link_to "+", expenses_path %></div>
-
   </div>
 
-
-
-  
-  <div id="vendor-buttons" class="small-12 small-centered columns field">
-    <%= f.label "Vendor" %>
-    <%= f.text_field :vendor_id, class: "radius" %>
-  </div>
   <div class="small-12 small-centered columns field">
-    <%= f.submit "Add", class: 'button tiny radius' %>
+    <%= link_to fa_icon("comment"), 'javascript:;', id: "comment-icon" %>
+  </div>
+  
+  <div id="add-comment" class="small-12 small-centered columns field">
+    <%= f.label "Comment" %>
+    <%= f.text_area :comment, class: "radius" %>
+  </div>
+  <div class="small-12 small-centered columns">
+    <%= f.submit "ADD", class: 'button small radius wide-button success' %>
   </div>
 <% end %>
 

@@ -25,6 +25,12 @@ $(document).ready(function(){
 		 event.preventDefault();
    	});
 
+   $('#comment-icon').click(function(event){
+   	$('#add-comment').show();
+		$(this).hide();
+		 event.preventDefault();
+   	});
+
 
 $(document).on("change", "select#category", function(e){
    $(this).attr("expense_vendor_id", $(this).val()); // this sets the "data-option-value" to the value
