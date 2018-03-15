@@ -15,20 +15,19 @@
   </div>
 <% else %>
 
-<div class="row">
-<div class="small-12 medium-11 large-11 columns small-centered">
-<%= render 'form' %>
 
+<div class="">
+<%= render 'form' %>
 
 <div id="expenses-list" class="">
   <h5>
     <% @date = Date.today  %>  
     <strong><%= @date.strftime("%B")%></strong>
   </h5>
-  <table class="tight-table 12-small columns">
+  <table class="tight-table">
     <thead>
       <tr>
-        <th width="75" class="small-text"></th>
+        <th width="100" class="small-text"></th>
         <th width="200" class="small-text"></th>
         <th width="75" class="small-text"></th>
 
@@ -39,7 +38,7 @@
         <% @expenses_this_month.each do |expense| %>
           
           <tr>
-            <td><%= expense.date.try(:strftime, '%-m-%d-%y') %></td>
+            <td><%= expense.date.try(:strftime, '%-m/%d/%y') %></td>
             <td><%= expense.category %></td>
             <td><%= number_to_currency(expense.amount) %></td>
           </tr>
@@ -54,5 +53,4 @@
 </div>
 
 <% end %>
-</div>
 </div>
