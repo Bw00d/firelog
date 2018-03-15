@@ -454,4 +454,14 @@ table.observation {
 .hidden {
   display: none;
 }
+table.tight-table {
+  padding: 0 !important;
+  th {
+    font-size: 1em;
+    padding: 2px 5px;
+  }
+  td {
+    padding: 2px 5px;
+  }
+}
 

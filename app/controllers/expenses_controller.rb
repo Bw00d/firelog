@@ -6,6 +6,7 @@ class ExpensesController < ApplicationController
   def index
     @expense = Expense.new
     @expenses = Expense.all.order("date DESC")
+    @expenses_this_month = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
     if current_user
       @categories = current_user.categories
     else

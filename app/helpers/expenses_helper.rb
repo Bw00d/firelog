@@ -6,4 +6,8 @@ module ExpensesHelper
 		array.join(",")
 	end
 
+	def total_expenses(expenses)
+		expenses.pluck(:amount).sum
+	end
+
 end
