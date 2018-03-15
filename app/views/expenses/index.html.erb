@@ -1,5 +1,6 @@
 <%= content_for :title, "Firelog" %>
 <% unless signed_in? %>
+
   <div  class="row">
     <div class="small-12 medium-8 large-8 columns small-centered">
     <header id="title">
@@ -14,16 +15,16 @@
   </div>
 <% else %>
 
-
-<p></p>
+<div class="row">
+<div class="small-12 medium-11 large-11 columns small-centered">
 <%= render 'form' %>
 
 
-<div id="expenses-list" class="small-12 small-centered columns">
+<div id="expenses-list" class="">
   <h5>
     <% @date = Date.today  %>  
     <strong><%= @date.strftime("%B")%></strong>
-  </h>
+  </h5>
   <table class="tight-table 12-small columns">
     <thead>
       <tr>
@@ -53,3 +54,5 @@
 </div>
 
 <% end %>
+</div>
+</div>

@@ -1,15 +1,15 @@
 <%= form_for(@expense) do |f| %>
  
 
-  <div class="small-12 small-centered columns field">
+  <div class="">
     <%= f.label :date %>
     <%= f.text_field :date, id: "date" %>
   </div>
-  <div class="small-12 small-centered columns field">
+  <div class="">
     <%= f.label :amount %>
     <%= f.text_field :amount %>
   </div>
-  <div id="category-buttons" class="small-12 small-centered columns field">
+  <div id="category-buttons" class="">
     <%= f.label :category_id, "Category" %>
     <%= f.hidden_field :category_id, value: @expense.category_id  %>
     <% @categories.each do |category| %>
@@ -21,15 +21,15 @@
     <div class="add-category-button"><%= link_to "+", expenses_path %></div>
   </div>
 
-  <div class="small-12 small-centered columns field">
+  <div class="">
     <%= link_to fa_icon("comment"), 'javascript:;', id: "comment-icon" %>
   </div>
   
-  <div id="add-comment" class="small-12 small-centered columns field">
+  <div id="add-comment" class="">
     <%= f.label "Comment" %>
     <%= f.text_area :comment, class: "radius" %>
   </div>
-  <div class="small-12 small-centered columns">
+  <div class="">
     <%= f.submit "ADD", class: 'button small radius wide-button success' %>
   </div>
 <% end %>
