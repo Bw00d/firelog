@@ -50,6 +50,11 @@
           </tr>
     </tbody>
   </table>
+  <ul>
+  <% @dates.sort.each do |d| %>
+  <li class="months"><%= Date::MONTHNAMES[d] %></li>
+  <% end %>
+  </ul>
 </div>
 
 <% end %>
