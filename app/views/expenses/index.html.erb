@@ -35,7 +35,8 @@
     </thead>
 
         <tbody>
-        <% @expenses_this_month.each do |expense| %>
+        <% %>
+        <% find_expenses_by_month(Date.today.month).each do |expense| %>
           
           <tr>
             <td><%= expense.date.try(:strftime, '%-m/%d/%y') %></td>
@@ -46,7 +47,7 @@
         <tr>
             <td><strong>Total:</strong></td>
             <td></td>
-            <td><strong><%= number_to_currency(total_expenses(@expenses_this_month)) %></strong></td>
+            <td><strong><%= number_to_currency(total_expenses(Date.today.month)) %></strong></td>
           </tr>
     </tbody>
   </table>
@@ -63,5 +64,5 @@
 
 <div>
 
-</div><%= line_chart @expenses_this_month.group(:date).sum(:amount) %>
+</div><%= line_chart find_expenses_by_month(Date.today.month).group(:date).sum(:amount) %>
 

@@ -9,4 +9,6 @@ has_one :category
 	def vendor
 		Vendor.find(self.vendor_id).name
 	end
+
+	
 end

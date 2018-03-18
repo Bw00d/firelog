@@ -6,7 +6,7 @@ class ExpensesController < ApplicationController
   def index
     @expense = Expense.new
     @expenses = Expense.all.order("date DESC")
-    @expenses_this_month = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
+    # @expenses_this_month = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
     @dates =  @expenses.select("date").map{ |i| i.date.month }.uniq
 
     if current_user

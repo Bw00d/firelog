@@ -6,8 +6,12 @@ module ExpensesHelper
 		array.join(",")
 	end
 
-	def total_expenses(expenses)
-		expenses.pluck(:amount).sum
+	def total_expenses(month)
+		find_expenses_by_month(month).pluck(:amount).sum
+	end
+
+	def find_expenses_by_month(month)
+		Expense.where('extract(month from date) = ?', month)
 	end
 
 end
