@@ -55,3 +55,8 @@
 <% end %>
 </div>
 </div>
+
+<div>
+
+</div><%= line_chart @expenses_this_month.group(:date).sum(:amount) %>
+
