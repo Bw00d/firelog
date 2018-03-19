@@ -11,7 +11,7 @@ module ExpensesHelper
 	end
 
 	def find_expenses_by_month(month)
-		Expense.where('extract(month from date) = ?', month)
+		Expense.where('extract(month from date) = ?', month).order("date DESC")
 	end
 
 

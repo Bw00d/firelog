@@ -1,0 +1,11 @@
+<br>
+<div class="chart">
+	<h6>DAILY SPENDING</h6>
+	<%= line_chart find_expenses_by_month(Date.today.month).group(:date).sum(:amount) %>
+</div>
+<br>
+<div class="chart">
+	<h6>AVERAGE BY CATEGORY</h6>
+	<%= pie_chart find_expenses_by_month(Date.today.month).group(:category_id).sum(:amount), donut: true %>
+</div>
+
