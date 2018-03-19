@@ -36,7 +36,7 @@
 
           <tbody>
           <% %>
-          <% find_expenses_by_month(Date.today.month).each do |expense| %>
+          <% find_expenses_by_month(Date.today.month).order("date DESC").each do |expense| %>
             
             <tr>
               <td><%= expense.date.try(:strftime, '%-m/%d/%y') %></td>
