@@ -14,4 +14,5 @@ module ExpensesHelper
 		Expense.where('extract(month from date) = ?', month)
 	end
 
+
 end

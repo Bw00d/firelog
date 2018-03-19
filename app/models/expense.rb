@@ -11,4 +11,5 @@ has_one :category
 	end
 
 	
+	
 end

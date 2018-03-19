@@ -65,4 +65,5 @@
 <div>
 
 </div><%= line_chart find_expenses_by_month(Date.today.month).group(:date).sum(:amount) %>
+</div><%= pie_chart find_expenses_by_month(Date.today.month).group(:category_id).sum(:amount), donut: true %>
 
