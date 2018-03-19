@@ -116,7 +116,12 @@ input#category-input {
 .expense-amount {
     text-align: right;
 }
-
+.delete-expense {
+    color: red;
+    a {
+        color: red;
+    }
+}
 // display months
 li.months {
     list-style: none;

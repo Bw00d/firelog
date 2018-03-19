@@ -41,7 +41,7 @@
             <tr>
               <td><%= expense.date.try(:strftime, '%-m/%d/%y') %></td>
               <td><%= expense.category %></td>
-              <td><%= number_to_currency(expense.amount) %></td>
+              <td><%= number_to_currency(expense.amount) %> <%= link_to fa_icon("times"), expense, method: :delete, data: { confirm: 'Are you sure?' }, class: "right delete-expense" %></td>
             </tr>
           <% end %>
           <tr>
