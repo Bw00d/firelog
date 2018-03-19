@@ -13442,66 +13442,105 @@ input#category-input {
 .expense-amount {
   text-align: right;
 }
+
+/* line 119, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.delete-expense {
+  color: red;
+}
+/* line 121, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.delete-expense a {
+  color: red;
+}
+
+/* line 126, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+li.months {
+  list-style: none;
+  background: #D2D2D2;
+  -moz-border-radius: 40px/40px;
+  -webkit-border-radius: 40px 40px;
+  border-radius: 40px/40px;
+  padding: 5px 15px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+/* line 135, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+li.months a {
+  color: black;
+}
 /* line 6, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .top-bar.expanded {
   background-color: #333333;
 }
 
-/* line 11, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 9, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+main {
+  padding: 15px 2% 25px 2%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 16, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+.columns {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 21, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #new-incident-form h2, #new-incident-form h3 {
   text-align: center;
 }
-/* line 14, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 24, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #new-incident-form h4 {
   color: #333;
   text-align: center;
   margin-left: -10px;
   margin-right: -10px;
 }
-/* line 20, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 30, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #new-incident-form .button {
   width: 100%;
 }
-/* line 24, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 34, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #new-incident-form .columns {
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 28, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 38, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #new-incident-form p {
   color: #BBBBBB;
   text-align: justified;
 }
-/* line 32, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 42, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #new-incident-form .button {
   margin-top: 50px;
 }
 
-/* line 37, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 47, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #observation-form {
   display: none;
 }
-/* line 39, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 49, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #observation-form .button {
   width: 100%;
 }
 
-/* line 44, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 54, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #new_note {
   display: none;
 }
 
-/* line 49, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 59, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #request-index {
   margin-top: 5%;
 }
-/* line 51, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 61, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #request-index h4 {
   text-align: center;
   font-weight: bold;
 }
 
-/* line 56, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 66, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .request {
   border: 1px solid #07c5ff;
   -moz-border-radius: .5em/.5em;
@@ -13510,61 +13549,61 @@ input#category-input {
   padding: 2%;
   margin-bottom: 10px;
 }
-/* line 63, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 73, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .request .date {
   float: right;
 }
 
-/* line 67, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 77, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .request:hover {
   background-color: #07c5ff;
 }
-/* line 69, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 79, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .request:hover h5 {
   color: white !important;
 }
 
-/* line 75, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 85, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #welcome-page {
   min-height: 450px;
 }
-/* line 77, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 87, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #welcome-page h3, #welcome-page h4 {
   color: #a0a0a0;
 }
 
-/* line 81, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 91, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #home-message {
   text-align: center;
   margin: 35px auto 15% auto;
 }
-/* line 84, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 94, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #home-message p {
   color: #a0a0a0;
 }
-/* line 87, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 97, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #home-message h3, #home-message h4 {
   text-align: justify;
   margin-bottom: 1.25em;
 }
 
-/* line 94, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 104, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #access-message p {
   text-align: justify;
   color: #a0a0a0;
 }
-/* line 98, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 108, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #access-message h3, #access-message h4 {
   color: #46b3e8;
 }
 
-/* line 102, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 112, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .button-group {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 108, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 118, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .face-avatar {
   -moz-border-radius: 8em/8em;
   -webkit-border-radius: 8em 8em;
@@ -13576,14 +13615,14 @@ input#category-input {
   border: 2px solid #07c5ff;
   margin: 0 auto;
 }
-/* line 118, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 128, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .face-avatar img {
   width: 100%;
   height: auto;
   min-height: 8em;
   min-width: 8em;
 }
-/* line 124, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 134, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .face-avatar h4 {
   margin-top: 3.5em;
   width: 4em;
@@ -13597,7 +13636,7 @@ input#category-input {
   left: 2%;
 }
 
-/* line 138, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 148, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .show-avatar {
   -moz-border-radius: 11em/11em;
   -webkit-border-radius: 11em 11em;
@@ -13608,7 +13647,7 @@ input#category-input {
   margin-bottom: 0;
   margin: 0 auto;
 }
-/* line 147, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 157, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .show-avatar img {
   width: 100%;
   height: auto;
@@ -13616,7 +13655,7 @@ input#category-input {
   min-width: 11em;
 }
 
-/* line 154, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 164, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .index-avatar {
   text-align: center;
   -moz-border-radius: 5em/5em;
@@ -13632,7 +13671,7 @@ input#category-input {
   margin-right: 2%;
   margin-bottom: 4%;
 }
-/* line 168, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 178, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .index-avatar img {
   width: 100%;
   height: auto;
@@ -13640,62 +13679,62 @@ input#category-input {
   min-width: 5em;
 }
 
-/* line 176, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 186, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .wide-button {
   margin: 25px auto 50px auto;
   text-align: center;
   width: 100%;
 }
 
-/* line 184, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 194, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .title-area li.name a {
   color: #fe4880;
 }
 
-/* line 190, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 200, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .form-fields {
   margin-top: 10px;
 }
 
-/* line 193, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 203, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 h4#add-text {
   position: absolute;
   margin-left: 10px;
 }
 
-/* line 198, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 208, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 a.selected {
   color: #a0a0a0;
   text-decoration: underline;
 }
 
-/* line 202, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 212, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #directory {
   text-align: center;
 }
-/* line 204, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 214, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #directory li {
   list-style: none;
 }
 
-/* line 208, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 218, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .digg_pagination {
   background: transparent;
   cursor: default;
 }
-/* line 211, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 221, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .digg_pagination a, .digg_pagination span, .digg_pagination em {
   padding: 0.2em 0.5em;
   display: block;
   float: left;
   margin-right: 1px;
 }
-/* line 217, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 227, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .digg_pagination .disabled {
   color: #999999;
   border: 1px solid #dddddd;
 }
-/* line 221, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 231, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .digg_pagination .current {
   font-style: normal;
   font-weight: bold;
@@ -13703,18 +13742,18 @@ a.selected {
   color: white;
   border: 1px solid #07c5ff;
 }
-/* line 228, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 238, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .digg_pagination a {
   text-decoration: none;
   color: #07c5ff;
   border: 1px solid #07c5ff;
 }
-/* line 232, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 242, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .digg_pagination a:hover, .digg_pagination a:focus {
   color: #000033;
   border-color: #000033;
 }
-/* line 237, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 247, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .digg_pagination .page_info {
   background: #2e6ab1;
   color: white;
@@ -13723,13 +13762,13 @@ a.selected {
   margin-bottom: 0.3em;
   text-align: center;
 }
-/* line 244, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 254, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .digg_pagination .page_info b {
   color: #000033;
   background: #43ffff;
   padding: 0.1em 0.25em;
 }
-/* line 251, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 261, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .digg_pagination:after {
   content: ".";
   display: block;
@@ -13737,54 +13776,54 @@ a.selected {
   clear: both;
   visibility: hidden;
 }
-/* line 258, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 268, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 * html .digg_pagination {
   height: 1%;
 }
-/* line 261, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 271, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 *:first-child + html .digg_pagination {
   overflow: hidden;
 }
 
-/* line 265, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 275, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .pagination {
   margin: 0 auto;
   text-align: center !important;
   margin-bottom: 25px;
 }
 
-/* line 270, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 280, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #choices {
   text-align: center;
   margin: 0 auto;
 }
-/* line 273, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 283, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #choices ul {
   padding: 0;
   margin-left: 0;
 }
-/* line 277, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 287, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #choices li {
   position: relative;
   list-style: none;
 }
-/* line 279, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 289, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #choices li a {
   color: #222;
 }
 
-/* line 288, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 298, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .light-head {
   color: #E1E1E1;
   margin-bottom: 20px;
 }
 
-/* line 292, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 302, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .correct {
   color: #43ac6a;
 }
 
-/* line 295, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 305, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .icon {
   display: inline;
   margin-left: -25px;
@@ -13792,31 +13831,31 @@ a.selected {
   display: none;
 }
 
-/* line 301, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 311, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .transparent {
   color: white !important;
 }
 
-/* line 304, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 314, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .wrong {
   color: red !important;
 }
 
-/* line 308, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 318, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #inviteform .button {
   width: 100% !important;
 }
 
-/* line 315, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 325, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #error_explanation {
   color: #f00;
 }
-/* line 317, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 327, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
-/* line 321, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 331, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #error_explanation h2 {
   background-color: #f2dede;
   padding: 20px;
@@ -13826,7 +13865,7 @@ a.selected {
   font-size: 1.2em;
 }
 
-/* line 330, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 340, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #flash_alert {
   background-color: #f2dede;
   padding: 20px;
@@ -13835,7 +13874,7 @@ a.selected {
   margin-bottom: 5px;
 }
 
-/* line 337, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 347, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .alert-error {
   background-color: #f2dede;
   padding: 20px;
@@ -13844,7 +13883,7 @@ a.selected {
   margin-bottom: 5px;
 }
 
-/* line 343, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 353, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .alert-alert {
   background-color: #f2dede;
   padding: 20px;
@@ -13853,7 +13892,7 @@ a.selected {
   margin-bottom: 5px;
 }
 
-/* line 350, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 360, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .alert-success {
   background-color: #dff0d8;
   padding: 20px;
@@ -13861,7 +13900,7 @@ a.selected {
   color: #79a37e;
 }
 
-/* line 356, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 366, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .alert-notice {
   background-color: #fcf8e3;
   padding: 20px;
@@ -13869,29 +13908,29 @@ a.selected {
   color: #79a37e;
 }
 
-/* line 362, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 372, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #title {
   text-align: center;
   margin: 75px auto 5% auto;
   clear: both;
 }
-/* line 366, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 376, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #title h1 {
   color: #fd2940;
   font-weight: bolder;
 }
 
-/* line 372, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 382, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #search-form {
   margin-top: 2%;
   text-align: center;
 }
-/* line 375, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 385, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #search-form i {
   font-size: 1.3em;
 }
 
-/* line 380, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 390, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 i#search-icon {
   color: #CCCCCC;
   position: absolute;
@@ -13901,42 +13940,42 @@ i#search-icon {
   right: 23px;
 }
 
-/* line 389, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 399, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #show-request {
   margin-top: 5%;
 }
-/* line 391, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 401, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #show-request #date {
   margin-top: -10px;
 }
-/* line 395, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 405, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #show-request .small-text {
   font-size: .85rem;
   color: #696969;
 }
-/* line 399, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 409, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #show-request .button {
   margin-top: 3%;
   width: 100%;
 }
 
-/* line 405, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 415, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .obs h6 {
   font-weight: bold;
   text-align: center;
 }
 
-/* line 410, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 420, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 table.observation {
   width: 100%;
 }
-/* line 412, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 422, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 table.observation th {
   padding: 0 0 0 5px;
   font-size: .55rem;
   text-align: center;
 }
-/* line 417, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 427, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 table.observation td {
   font-size: .75rem;
   text-align: center;
@@ -13944,27 +13983,27 @@ table.observation td {
   padding-left: 0;
 }
 
-/* line 424, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 434, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #edit-icon {
   float: right;
   margin: 1% 1% 0 0;
 }
 
-/* line 429, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 439, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .delete-box {
   background-color: red;
   position: absolute;
   right: 0;
 }
 
-/* line 434, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 444, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .edit-obs {
   background-color: #008CBA;
   position: absolute;
   right: 50px;
 }
 
-/* line 439, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 449, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .delete-obs {
   background-color: red;
   position: absolute;
@@ -13974,31 +14013,31 @@ table.observation td {
   color: white;
   display: none;
 }
-/* line 447, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 457, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .delete-obs a {
   color: white;
 }
 
-/* line 451, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 461, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 #sitl-button {
   margin-top: 50px;
 }
 
-/* line 454, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 464, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .hidden {
   display: none;
 }
 
-/* line 457, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 467, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 table.tight-table {
   padding: 0 !important;
 }
-/* line 459, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 469, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 table.tight-table th {
   font-size: 1em;
   padding: 2px 5px;
 }
-/* line 463, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
+/* line 473, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 table.tight-table td {
   padding: 2px 5px;
 }
