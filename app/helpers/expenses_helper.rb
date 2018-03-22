@@ -14,5 +14,11 @@ module ExpensesHelper
 		Expense.where('extract(month from date) = ?', month)
 	end
 
+	def make_pie(expenses)
+		expenses.map {|k, v| [get_category(k).description, v] }
+	end
 
+	def get_category(id)
+		Category.find(id)
+	end
 end
