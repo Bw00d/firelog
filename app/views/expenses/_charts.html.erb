@@ -1,7 +1,8 @@
 <br>
 <div class="chart small-12 columns">
 	<h6>DAILY SPENDING</h6>
-	<%= line_chart find_expenses_by_month(Date.today.month).group(:date).sum(:amount) %>
+	<%= line_chart find_expenses_by_month(Date.today.month).group(:date).sum(:amount),
+	prefix: "$",decimal: "." %>
 </div>
 <br>
 <div class="chart small-12 columns">
