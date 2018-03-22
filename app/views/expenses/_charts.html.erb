@@ -6,6 +6,7 @@
 <br>
 <div class="chart small-12 columns">
 	<h6>AVERAGE BY CATEGORY</h6>
-	<%= pie_chart make_pie(find_expenses_by_month(Date.today.month).group(:category_id).sum(:amount)), donut: true %>
+	<%= pie_chart make_pie(find_expenses_by_month(Date.today.month).group(:category_id).sum(:amount)),
+	prefix: "$",decimal: ".", donut: true %>
 </div>
 
