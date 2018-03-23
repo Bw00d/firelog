@@ -12,6 +12,7 @@
 </div>
 
 <div class="chart small-12 columns">
+	<br>
 	<%= column_chart make_pie(find_expenses_by_month(Date.today.month).group(:category_id).sum(:amount)),
 	prefix: "$",decimal: ".", donut: true %>
 </div>
