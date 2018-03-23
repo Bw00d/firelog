@@ -1,15 +1,15 @@
 <%= form_for(@expense) do |f| %>
  
 
-  <div class="">
+  <div class="small-12 columns">
     <%= f.label :date %>
     <%= f.text_field :date, id: "date", class: "radius" %>
   </div>
-  <div class="">
+  <div class="small-12 columns">
     <%= f.label :amount %>
     <%= f.text_field :amount, class: "radius" %>
   </div>
-  <div id="category-buttons" class="">
+  <div id="category-buttons" class="small-12 columns">
     <%= f.label :category_id, "Category" %>
     <%= f.hidden_field :category_id, value: @expense.category_id  %>
     <% @categories.each do |category| %>

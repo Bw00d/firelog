@@ -7,9 +7,11 @@
       <h1>Firelog</h1>
         <h4>Track My Burn Rate</h4>
     </header>
-      <div id="home-message" class="small-12 medium-8 large-8 columns medium-centered large-centered ">
+    <div class="row">
+      <div id="home-message" class="small-12 medium-8 large-8 columns small-centered medium-centered large-centered ">
         <%= link_to "Get Started", new_user_registration_path, class: "button success radius" %>
       </div>
+    </div>
 
     </div>
   </div>
@@ -61,7 +63,6 @@
     </ul>
   </div>
 
-  <% end %>
   </div>
 </div>
 <div class="row">
@@ -69,6 +70,7 @@
   <%= render 'charts' %>
   </div>
 </div>
+<% end %>
 
 
 
