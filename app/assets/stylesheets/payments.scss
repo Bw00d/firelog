@@ -1,3 +1,15 @@
-// Place all the styles related to the Payments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#payment-type {
+	margin-top: 25px;
+	height: 40px;
+	li {
+		display: inline-block;
+		list-style: none;
+		margin-right: 4%;
+	}
+	img {
+		height: 40px;
+	}
+	.unselected {
+		display: none;
+	}
+}

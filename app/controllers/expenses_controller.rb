@@ -8,6 +8,7 @@ class ExpensesController < ApplicationController
     @expenses = Expense.all.order("date DESC")
     # @expenses_this_month = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
     @dates =  @expenses.select("date").map{ |i| i.date.month }.uniq
+    @payments = Payment.all
 
     if current_user
       @categories = current_user.categories.order('description ASC')
@@ -79,6 +80,6 @@ class ExpensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def expense_params
-      params.require(:expense).permit(:amount, :date, :category_id, :vendor_id, :user_id, :comment)
+      params.require(:expense).permit(:amount, :date, :category_id, :vendor_id, :user_id, :comment, :payment_id)
     end
 end

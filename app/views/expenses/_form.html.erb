@@ -5,7 +5,7 @@
     <%= f.label :date %>
     <%= f.text_field :date, id: "date", class: "radius" %>
   </div>
-  <div class="small-12 columns">
+  <div id="amount" class="small-12 columns">
     <%= f.label :amount %>
     <%= f.text_field :amount, class: "radius" %>
   </div>
@@ -21,6 +21,7 @@
     <div class="add-category-button"><%= link_to "+", expenses_path %></div>
   </div>
 
+
   <div class="">
     <%= link_to fa_icon("comment"), 'javascript:;', id: "comment-icon" %>
   </div>
@@ -28,6 +29,14 @@
   <div id="add-comment" class="">
     <%= f.label "Comment" %>
     <%= f.text_area :comment, class: "radius", autofocus: true %>
+  </div>
+  <div>
+    <ul id="payment-type">
+      <% @payments.each do |p| %>
+      <li id=<%= p.id %> class="payment-logo"><%= image_tag p.logo.url(:thumb) %></li>
+      <% end %>
+      <%= f.hidden_field :payment_id, value: @expense.payment_id, id: "payment-id" %>
+    </ul>
   </div>
   <div class="">
     <%= f.submit "ADD", class: 'button small radius wide-button success' %>

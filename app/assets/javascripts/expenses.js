@@ -31,6 +31,15 @@ $(document).ready(function(){
 		 event.preventDefault();
    	});
 
+   // payment
+   $('.payment-logo').click(function(event){
+   	value = $(this).closest('li').attr('id');
+   	$('#payment-id').val(value);
+   	$('.payment-logo').toggleClass('unselected');
+
+		  $(this).toggleClass('unselected');
+   });
+
 
 $(document).on("change", "select#category", function(e){
    $(this).attr("expense_vendor_id", $(this).val()); // this sets the "data-option-value" to the value
