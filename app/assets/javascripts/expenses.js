@@ -36,8 +36,8 @@ $(document).ready(function(){
    	value = $(this).closest('li').attr('id');
    	$('#payment-id').val(value);
    	$('.payment-logo').toggleClass('unselected');
-
-		  $(this).toggleClass('unselected');
+	  $(this).toggleClass('unselected');
+	  event.preventDefault();
    });
 
 
