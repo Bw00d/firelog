@@ -38,8 +38,7 @@
         </tr>
       </thead>
 
-          <tbody>
-          <% %>
+          <tbody id="expense-table" data-internalid=<%= Date.today.month %>>
           <% find_expenses_by_month(Date.today.month).order("date DESC").each do |expense| %>
             
             <tr>
@@ -56,6 +55,7 @@
           <tr>
               <td><strong>Total:</strong></td>
               <td></td>
+              <td></td>
               <td class="show-for-medium-up"></td>
               <td><strong><%= number_to_currency(total_expenses(Date.today.month)) %></strong></td>
             </tr>
@@ -63,7 +63,8 @@
     </table>
     <ul>
     <% @dates.sort.each do |d| %>
-    <li class="months"><%= Date::MONTHNAMES[d] %></li>
+
+    <li class="months<% if d == Date.today.month %> selected-month <% end %> "><%= Date::MONTHNAMES[d] %></li>
     <% end %>
     </ul>
   </div>
