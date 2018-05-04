@@ -40,6 +40,39 @@ $(document).ready(function(){
 	  event.preventDefault();
    });
 
+   // months
+   $('.months').click(function(event){
+   	$('li.months').removeClass('selected-month');
+   	$(this).addClass('selected-month');
+   	event.preventDefault();
+   });
+
+   // test month
+   $('.months').click(function(event){
+      $('$month') = 2;
+
+      event.preventDefault();
+   });
+
+   // showing month charts
+   $('#may').show();
+   $( "a:contains('May')" ).click(function(){
+      $('.month-chart').hide();
+      $('#may').show();
+   });
+   $( "a:contains('April')" ).click(function(){
+      $('.month-chart').hide();
+      $('#april').show();
+   });
+   $( "a:contains('March')" ).click(function(){
+      $('.month-chart').hide();
+      $('#march').show();
+   });
+   $( "a:contains('February')" ).click(function(){
+      $('.month-chart').hide();
+      $('#february').show();
+   });
+
 
 $(document).on("change", "select#category", function(e){
    $(this).attr("expense_vendor_id", $(this).val()); // this sets the "data-option-value" to the value

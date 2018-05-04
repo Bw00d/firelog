@@ -22,51 +22,7 @@
   <%= render 'form' %>
 
   <div id="expenses-list" class="">
-    <h5>
-      <% @date = Date.today  %>  
-      <strong><%= @date.strftime("%B")%></strong>
-    </h5>
-    <table class="tight-table small-12 columns">
-      <thead>
-        <tr>
-          <th width="100" class="small-text"></th>
-          <th width="200" class="small-text show-for-medium-up"></th>
-          <th width="200" class="small-text"></th>
-          <th width="25" class="small-text"></th>
-          <th width="75" class="small-text"></th>
-
-        </tr>
-      </thead>
-
-          <tbody id="expense-table" data-internalid=<%= Date.today.month %>>
-          <% find_expenses_by_month(Date.today.month).order("date DESC").each do |expense| %>
-            
-            <tr>
-              <td><%= expense.date.try(:strftime, '%-m/%d/%y') %></td>
-              <td><%= expense.category %></td>
-              <td class="show-for-medium-up"><%= expense.comment %></td>
-              <td class="">
-                <% if expense.payment_id? %>
-                  <%= image_tag expense.payment.logo.url(:tiny) %></td>
-                <% end %>
-              <td><%= number_to_currency(expense.amount) %> <%= link_to fa_icon("times"), expense, method: :delete, data: { confirm: 'Are you sure?' }, class: "right delete-expense" %></td>
-            </tr>
-          <% end %>
-          <tr>
-              <td><strong>Total:</strong></td>
-              <td></td>
-              <td></td>
-              <td class="show-for-medium-up"></td>
-              <td><strong><%= number_to_currency(total_expenses(Date.today.month)) %></strong></td>
-            </tr>
-      </tbody>
-    </table>
-    <ul>
-    <% @dates.sort.each do |d| %>
-
-    <li class="months<% if d == Date.today.month %> selected-month <% end %> "><%= Date::MONTHNAMES[d] %></li>
-    <% end %>
-    </ul>
+    <%= render 'monthly_expenses', locals: { expenses: @expenses} %>
   </div>
 
   </div>

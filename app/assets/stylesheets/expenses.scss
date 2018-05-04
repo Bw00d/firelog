@@ -137,4 +137,14 @@ li.months {
     }
     margin-bottom: 10px;
 }
+.selected-month {
+    background-color: #4b4b4b !important;
+    a {
+    color: white !important;
+    }
+}
+
+.month-chart {
+    display: none;
+}
 

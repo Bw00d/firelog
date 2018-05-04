@@ -5,9 +5,10 @@ class ExpensesController < ApplicationController
   # GET /expenses.json
   def index
     @expense = Expense.new
-    @expenses = Expense.all.order("date DESC")
-    # @expenses_this_month = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
-    @dates =  @expenses.select("date").map{ |i| i.date.month }.uniq
+    # @expenses = Expense.all
+    # @expenses = Expense.all.order("date DESC")
+    @expenses = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
+    @dates =  Expense.all.select("date").map{ |i| i.date.month }.uniq
     @payments = Payment.all
 
     if current_user
@@ -71,6 +72,13 @@ class ExpensesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def selected_month
+    @selected = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
+    respond_to do |format|
+        format.js
+    end
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.

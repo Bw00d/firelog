@@ -1,19 +1,88 @@
-<br>
-<div class="chart small-12 columns">
-	<h6>DAILY SPENDING</h6>
-	<%= line_chart find_expenses_by_month(Date.today.month).group(:date).sum(:amount),
-	prefix: "$",decimal: "." %>
-</div>
-<br>
-<div class="chart small-12 columns">
-	<h6>AVERAGE BY CATEGORY</h6>
-	<%= pie_chart make_pie(find_expenses_by_month(Date.today.month).group(:category_id).sum(:amount)),
-	prefix: "$",decimal: ".", donut: true %>
-</div>
-
-<div class="chart small-12 columns">
+<!-- Bad Code! Fix Soon! -->
+<!-- May -->
+<div id="may" class="month-chart">
 	<br>
-	<%= column_chart make_pie(find_expenses_by_month(Date.today.month).group(:category_id).sum(:amount)),
-	prefix: "$",decimal: ".", donut: true %>
+	<div class="chart small-12 columns">
+		<h6>DAILY SPENDING</h6>
+		<%= line_chart find_expenses_by_month(5).group(:date).sum(:amount),
+		prefix: "$",decimal: "." %>
+	</div>
+	<br>
+	<div class="chart small-12 columns">
+		<h6>AVERAGE BY CATEGORY</h6>
+		<%= pie_chart make_pie(find_expenses_by_month(5).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
+
+	<div class="chart small-12 columns">
+		<br>
+		<%= column_chart make_pie(find_expenses_by_month(5).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
 </div>
 
+<!-- April -->
+<div id="april" class="month-chart">
+	<br>
+	<div class="chart small-12 columns">
+		<h6>DAILY SPENDING</h6>
+		<%= line_chart find_expenses_by_month(4).group(:date).sum(:amount),
+		prefix: "$",decimal: "." %>
+	</div>
+	<br>
+	<div class="chart small-12 columns">
+		<h6>AVERAGE BY CATEGORY</h6>
+		<%= pie_chart make_pie(find_expenses_by_month(4).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
+
+	<div class="chart small-12 columns">
+		<br>
+		<%= column_chart make_pie(find_expenses_by_month(4).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
+</div>
+
+<!-- March -->
+<div id="march" class="month-chart">
+	<br>
+	<div class="chart small-12 columns">
+		<h6>DAILY SPENDING</h6>
+		<%= line_chart find_expenses_by_month(3).group(:date).sum(:amount),
+		prefix: "$",decimal: "." %>
+	</div>
+	<br>
+	<div class="chart small-12 columns">
+		<h6>AVERAGE BY CATEGORY</h6>
+		<%= pie_chart make_pie(find_expenses_by_month(3).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
+
+	<div class="chart small-12 columns">
+		<br>
+		<%= column_chart make_pie(find_expenses_by_month(3).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
+</div>
+
+<!-- February -->
+<div id="february" class="month-chart">
+	<br>
+	<div class="chart small-12 columns">
+		<h6>DAILY SPENDING</h6>
+		<%= line_chart find_expenses_by_month(2).group(:date).sum(:amount),
+		prefix: "$",decimal: "." %>
+	</div>
+	<br>
+	<div class="chart small-12 columns">
+		<h6>AVERAGE BY CATEGORY</h6>
+		<%= pie_chart make_pie(find_expenses_by_month(2).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
+
+	<div class="chart small-12 columns">
+		<br>
+		<%= column_chart make_pie(find_expenses_by_month(2).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
+</div>
