@@ -23953,8 +23953,42 @@ $(document).ready(function(){
    	value = $(this).closest('li').attr('id');
    	$('#payment-id').val(value);
    	$('.payment-logo').toggleClass('unselected');
+	  $(this).toggleClass('unselected');
+	  event.preventDefault();
+   });
 
-		  $(this).toggleClass('unselected');
+   // months
+   $('.months').click(function(event){
+   	$('li.months').removeClass('selected-month');
+   	$(this).addClass('selected-month');
+   	event.preventDefault();
+   });
+
+   // test month
+   $('.months').click(function(event){
+      $('$month') = 2;
+
+      event.preventDefault();
+   });
+
+   // showing month charts
+   $('.month-chart').hide();
+   $('#may').show();
+   $( "a:contains('May')" ).click(function(){
+      $('.month-chart').hide();
+      $('#may').show();
+   });
+   $( "a:contains('April')" ).click(function(){
+      $('.month-chart').hide();
+      $('#april').show();
+   });
+   $( "a:contains('March')" ).click(function(){
+      $('.month-chart').hide();
+      $('#march').show();
+   });
+   $( "a:contains('February')" ).click(function(){
+      $('.month-chart').hide();
+      $('#february').show();
    });
 
 

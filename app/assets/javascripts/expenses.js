@@ -47,12 +47,6 @@ $(document).ready(function(){
    	event.preventDefault();
    });
 
-   // test month
-   $('.months').click(function(event){
-      $('$month') = 2;
-
-      event.preventDefault();
-   });
 
    // showing month charts
    $('.month-chart').hide();
