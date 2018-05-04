@@ -55,6 +55,7 @@ $(document).ready(function(){
    });
 
    // showing month charts
+   $('.month-chart').hide();
    $('#may').show();
    $( "a:contains('May')" ).click(function(){
       $('.month-chart').hide();
