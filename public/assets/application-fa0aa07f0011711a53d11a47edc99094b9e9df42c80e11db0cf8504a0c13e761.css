@@ -13468,6 +13468,20 @@ li.months {
 li.months a {
   color: black;
 }
+
+/* line 140, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.selected-month {
+  background-color: #4b4b4b !important;
+}
+/* line 142, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.selected-month a {
+  color: white !important;
+}
+
+/* line 147, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+#month-header {
+  font-weight: bold;
+}
 /* line 1, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/payments.scss */
 #payment-type {
   margin-top: 25px;
