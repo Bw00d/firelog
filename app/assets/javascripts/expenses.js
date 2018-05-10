@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+   var month = localStorage.getItem('month')
+   $('li.months').filter(function(){return this.value == month}).addClass('selected-month');
+   $('#month-header').text($('li.selected-month').text());
+
+
 	$(".selectize").selectize();
 
    // date picker
@@ -48,26 +53,16 @@ $(document).ready(function(){
    });
 
 
-   // showing month charts
-   $('.month-chart').hide();
-   $('#may').show();
-   $( "a:contains('May')" ).click(function(){
-      $('.month-chart').hide();
-      $('#may').show();
-   });
-   $( "a:contains('April')" ).click(function(){
-      $('.month-chart').hide();
-      $('#april').show();
-   });
-   $( "a:contains('March')" ).click(function(){
-      $('.month-chart').hide();
-      $('#march').show();
-   });
-   $( "a:contains('February')" ).click(function(){
-      $('.month-chart').hide();
-      $('#february').show();
-   });
 
+   // retrieving month expenses
+   $('li.months').click(function(event){
+      $('#search-field').val($(this).val());
+         $('#search-form').submit();
+         event.preventDefault;
+         localStorage.setItem('month', $(this).val())
+   });
+   
+      
 
 $(document).on("change", "select#category", function(e){
    $(this).attr("expense_vendor_id", $(this).val()); // this sets the "data-option-value" to the value

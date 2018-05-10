@@ -8,6 +8,11 @@ class ExpensesController < ApplicationController
     # @expenses = Expense.all
     # @expenses = Expense.all.order("date DESC")
     @expenses = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
+    if params[:search]
+    @expenses = Expense.search(params[:search]).order("date DESC")
+  else
+    @expenses = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
+  end
     @dates =  Expense.all.select("date").map{ |i| i.date.month }.uniq
     @payments = Payment.all
 
