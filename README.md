@@ -1,11 +1,13 @@
 Firelog
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+This is an application that I built to track my expenses. I built it to replace time consuming spreadsheets that I have been using for year. One intention of the project was to experiment ReactJS as the front end, but I have yet to do that.
 
-This is an application for managing wildland fire equipment and assets such as engines, crew carriers, dozers, etc.
+I am the only one using the app at the moment but it is available to anyone who wishes to use it. It is currently set up for me and the payment icons are ones that I use. I plan to update it so that a user can choose from a number of common icons.
 
-Ruby on Rails
+If you would like to contribute to the application feel free to fork it and make pull requests.
+
+
 -------------
 
 This application requires:
@@ -25,19 +27,24 @@ So far I have created the base application and added a style sheet. The applicat
 
 Todo
 -------------
-Next step: Decide how you want to build the models for assets. The way it was done in Firecall feels like it smells. Do a little more research on "composition".
+Auto populate common categories
+Make link to category index so users can edit or delete categories
+Improve styling of category page
+Fix some style bugs associated with creating a category
+Implement year to date charts
+Improve database queries using ajax
+Allow users to choose payment icons
+Add a little branding: logo, etc.
 
 Issues
 -------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
+CSS issues when adding new category
 
 Credits
 -------
 
+The base application was build using RailsComposer
+
 License
 -------
+Released under the [MIT License](https://opensource.org/licenses/MIT).
