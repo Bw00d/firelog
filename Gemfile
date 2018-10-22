@@ -15,6 +15,7 @@ gem "selectize-rails"
 gem "chartkick"
 gem "paperclip", "~> 6.0.0"
 gem 'aws-sdk-s3'
+gem 'jquery-validation-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

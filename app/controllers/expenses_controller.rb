@@ -8,6 +8,7 @@ class ExpensesController < ApplicationController
     # @expenses = Expense.all
     # @expenses = Expense.all.order("date DESC")
     @expenses = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
+    @yearly_expenses = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_year, DateTime.now).order("date DESC")
     if params[:search]
     @expenses = Expense.search(params[:search]).order("date DESC")
   else

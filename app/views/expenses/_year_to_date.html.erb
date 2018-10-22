@@ -1,0 +1,23 @@
+<!-- Bad Code! Fix Soon! -->
+<!-- May -->
+<div  class="month-chart">
+	<br>
+	<div class="chart small-12 columns">
+		<h6>Year To Date</h6>
+		<div><strong>Total: <%#= number_to_currency(total_expenses(@yearly_expenses)) %></strong></div>
+		<%#= line_chart find_expenses_by_year(params[:search]).group(:date).sum(:amount),
+		prefix: "$",decimal: "." %>
+	</div>
+	<br>
+	<div class="chart small-12 columns">
+		<h6>AVERAGE BY CATEGORY</h6>
+		<%#= pie_chart make_pie(@yearly_expenses).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
+
+	<div class="chart small-12 columns">
+		<br>
+		<%#= column_chart make_pie(@yearly_expenses).group(:category_id).sum(:amount)),
+		prefix: "$",decimal: ".", donut: true %>
+	</div>
+</div>
