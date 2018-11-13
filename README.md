@@ -27,18 +27,19 @@ So far I have created the base application and added a style sheet. The applicat
 
 Todo
 -------------
-Auto populate common categories
-Make link to category index so users can edit or delete categories
-Improve styling of category page
-Fix some style bugs associated with creating a category
-Implement year to date charts
-Improve database queries using ajax
-Allow users to choose payment icons
-Add a little branding: logo, etc.
+- Auto populate common categories
+- Make link to category index so users can edit or delete categories
+- Improve styling of category page
+- Fix some style bugs associated with creating a category
+- Implement year to date charts
+- Improve database queries using ajax
+- Allow users to choose payment icons
+- Add react frontend
+- Add a little branding: logo, etc.
 
 Issues
 -------------
-CSS issues when adding new category
+- CSS issues when adding new category
 
 Credits
 -------
