@@ -10,7 +10,7 @@ feature 'Home page' do
   #   Then I see "Home" in the title
   scenario 'visit the home page' do
     visit root_path
-    expect(page).to have_title 'Home'
+    expect(page).to have_title 'Firelog'
   end
   # Scenario: Visit the home page without signing in
   #   Given I am a visitor
