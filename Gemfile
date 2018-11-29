@@ -48,6 +48,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'simplecov', require: false
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'
