@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.3.7'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'puma', '~> 3.0'
@@ -16,10 +16,12 @@ gem "chartkick"
 gem "paperclip", "~> 6.0.0"
 gem 'aws-sdk-s3'
 gem 'jquery-validation-rails'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise'
+gem 'foundation-rails', '~> 5.5'
+gem 'high_voltage'
+gem 'pg'
 
-group :development, :test do
-  gem 'byebug', platform: :mri
-end
 
 group :development do
   gem 'web-console'
@@ -27,22 +29,14 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem  'binding_of_caller'
-end
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'devise'
-gem 'foundation-rails', '~> 5.5'
-gem 'high_voltage'
-gem 'pg'
-
-group :development do
   gem 'better_errors'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
 end
 
 group :development, :test do
-  gem 'factory_girl_rails'
+  gem 'byebug', platform: :mri
+  gem "factory_bot_rails"
   gem 'faker'
   gem 'rspec-rails'
 end

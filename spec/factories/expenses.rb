@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :expense do
     amount "9.99"
     date "2018-02-28"
