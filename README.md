@@ -12,7 +12,7 @@ If you would like to contribute to the application feel free to fork it and make
 
 This application requires:
 
-- Ruby 2.2.3
+- Ruby 2.3.7
 - Rails 5.0.0.1
 
 
