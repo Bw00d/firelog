@@ -34,12 +34,14 @@ Todo
 - Implement year to date charts
 - Improve database queries using ajax
 - Allow users to choose payment icons
-- Add react frontend
+- Add ReactJS frontend
 - Add a little branding: logo, etc.
 
 Issues
 -------------
 - CSS issues when adding new category
+    At the moment I am placing the category form with css. The form itself cannot go inside the expense form so I setting its position and tha is not working properly. 
+    I think a solution would be to next the category form and just check if the category already exhists then create a new category if necessary. This will require some js to populate the categoryt in the view.
 
 Credits
 -------
