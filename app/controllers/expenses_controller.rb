@@ -1,5 +1,6 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: [:show, :edit, :update, :destroy]
+  before_action :set_categories, only: [:index]
 
   # GET /expenses
   # GET /expenses.json
@@ -7,22 +8,22 @@ class ExpensesController < ApplicationController
     @expense = Expense.new
     # @expenses = Expense.all
     # @expenses = Expense.all.order("date DESC")
-    @expenses = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
-    @yearly_expenses = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_year, DateTime.now).order("date DESC")
-    if params[:search]
-    @expenses = Expense.search(params[:search]).order("date DESC")
-  else
-    @expenses = Expense.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month, DateTime.now.end_of_month).order("date DESC")
-  end
-    @dates =  Expense.all.select("date").map{ |i| i.date.month }.uniq
-    @payments = Payment.all
-
     if current_user
-      @categories = current_user.categories.order('description ASC')
-    else
-      @categories = []
+      expenses = current_user.expenses
+      @expenses = expenses.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month,
+                                 DateTime.now.end_of_month).order("date DESC")
+      @yearly_expenses = expenses.where('date >= ? AND date <= ?', DateTime.now.beginning_of_year,
+                                        DateTime.now).order("date DESC")
+      if params[:search]
+        @expenses = expenses.search(params[:search]).order("date DESC")
+      else
+        @expenses = expenses.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month,
+                                   DateTime.now.end_of_month).order("date DESC")
+      end
+      @dates =  expenses.select("date").map{ |i| i.date.month }.uniq
+      @years =  expenses.select("date").map{ |i| i.date.year }.uniq
+      @payments = Payment.all
     end
-    @category = Category.new
   end
 
   # GET /expenses/1
@@ -95,5 +96,14 @@ end
     # Never trust parameters from the scary internet, only allow the white list through.
     def expense_params
       params.require(:expense).permit(:amount, :date, :category_id, :vendor_id, :user_id, :comment, :payment_id)
+    end
+
+    def set_categories
+      if current_user
+        @categories = current_user.categories.order('description ASC')
+      else
+        @categories = []
+      end
+      @category = Category.new
     end
 end

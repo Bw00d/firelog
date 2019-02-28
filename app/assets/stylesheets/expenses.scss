@@ -6,7 +6,7 @@ $successGreen: #48AB6C;
 	text-align: center;
 	-moz-border-radius: 35px/35px;
     -webkit-border-radius: 35px 35px;
-    border-radius: 35px/35px; 
+    border-radius: 35px/35px;
     width:35px;
     height:35px;
     display: inline-block;
@@ -15,7 +15,7 @@ $successGreen: #48AB6C;
     color: $successGreen;
     float: left;
     clear: all;
-    
+
     a {
     	color: $successGreen;
     }
@@ -33,7 +33,7 @@ $successGreen: #48AB6C;
     -moz-border-radius: 40px/40px;
     -webkit-border-radius: 40px 40px;
     border-radius: 40px/40px;
-    padding: 5px 15px; 
+    padding: 5px 15px;
     float: left;
     margin-right: 10px;
     a {
@@ -84,7 +84,7 @@ span.hidden-id {
     text-align: center;
     -moz-border-radius: 35px/35px;
     -webkit-border-radius: 35px 35px;
-    border-radius: 35px/35px; 
+    border-radius: 35px/35px;
     width:35px;
     height:35px;
     display: inline-block;
@@ -129,7 +129,7 @@ li.months {
     -moz-border-radius: 40px/40px;
     -webkit-border-radius: 40px 40px;
     border-radius: 40px/40px;
-    padding: 5px 15px; 
+    padding: 5px 15px;
     float: left;
     margin-right: 10px;
     a {
@@ -143,8 +143,28 @@ li.months {
     color: white !important;
     }
 }
+li.years {
+  display: inline-block !important;
+    list-style: none;
+    background: #D2D2D2;
+    -moz-border-radius: 40px/40px;
+    -webkit-border-radius: 40px 40px;
+    border-radius: 40px/40px;
+    padding: 5px 15px;
+    float: left !important;
+    margin-right: 10px;
+    a {
+        color: black;
+    }
+    margin-bottom: 10px;
+}
+.selected-year {
+    background-color: #4b4b4b !important;
+    a {
+    color: white !important;
+    }
+}
 
 #month-header {
     font-weight: bold;
 }
-

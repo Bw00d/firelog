@@ -1,6 +1,6 @@
 <h5 id="month-header">
-        
-      <strong>May</strong>
+
+      <strong></strong>
     </h5>
     <table class="tight-table small-12 columns">
       <thead>
@@ -36,9 +36,17 @@
             </tr>
       </tbody>
     </table>
-    <ul>
-    <% @dates.sort.each do |d| %>
-
-    <li class="months" value =<%= d %>><%=link_to Date::MONTHNAMES[d], "#", data: d, remote: true %></li>
-    <% end %>
-    </ul>
+    <div class="row">
+      <ul>
+        <% @years.sort.each do |d| %>
+        <li class="years" value =<%= d %>><%=link_to d, "#", data: d, remote: true %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="row">
+      <ul>
+      <% @dates.sort.each do |d| %>
+        <li class="months" value =<%= d %>><%=link_to Date::MONTHNAMES[d], "#", data: d, remote: true %></li>
+      <% end %>
+      </ul>
+    </div>
