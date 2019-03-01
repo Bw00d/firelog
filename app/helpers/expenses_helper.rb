@@ -11,7 +11,8 @@ module ExpensesHelper
 	end
 
 	def find_expenses_by_month(month, user)
-		user.expenses.where('extract(month from date) = ?', month)
+		expenses = current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
+		expenses.where('extract(month from date) = ?', month)
 	end
 
 	def make_pie(expenses)
