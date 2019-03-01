@@ -1,29 +1,29 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:index]
+  before_action :set_expenses, only: [:index]
 
   # GET /expenses
   # GET /expenses.json
   def index
     @expense = Expense.new
-    # @expenses = Expense.all
-    # @expenses = Expense.all.order("date DESC")
-    if current_user
-      expenses = current_user.expenses
-      @expenses = expenses.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month,
+
+      @expenses = @current_user_expenses.where('date >= ? AND date <= ?',
+                                         DateTime.now.beginning_of_month,
                                  DateTime.now.end_of_month).order("date DESC")
-      @yearly_expenses = expenses.where('date >= ? AND date <= ?', DateTime.now.beginning_of_year,
-                                        DateTime.now).order("date DESC")
+      @yearly_expenses = @current_user_expenses.where('date >= ? AND date <= ?',
+                                                DateTime.now.beginning_of_year,
+                                                DateTime.now).order("date DESC")
       if params[:search]
-        @expenses = expenses.search(params[:search]).order("date DESC")
+        @expenses = @current_user_expenses.search(params[:search]).order("date DESC")
       else
-        @expenses = expenses.where('date >= ? AND date <= ?', DateTime.now.beginning_of_month,
+        @expenses = @current_user_expenses.where('date >= ? AND date <= ?',
+                                           DateTime.now.beginning_of_month,
                                    DateTime.now.end_of_month).order("date DESC")
       end
-      @dates =  expenses.select("date").map{ |i| i.date.month }.uniq
-      @years =  expenses.select("date").map{ |i| i.date.year }.uniq
+      @dates =  @current_user_expenses.select("date").map{ |i| i.date.month }.uniq
+      @years =  @current_user_expenses.select("date").map{ |i| i.date.year }.uniq
       @payments = Payment.all
-    end
   end
 
   # GET /expenses/1
@@ -50,8 +50,13 @@ class ExpensesController < ApplicationController
         format.html { redirect_to :back }
         format.json { redirect_to :back, status: :created, location: @expense }
       else
-        format.html { redirect_to :back, alert: "Oops, try that again. Choose date, amount, and category." }
-        format.json { render json: @expense.errors, status: :unprocessable_entity }
+        format.html { redirect_to :back,
+          alert: "Oops, try that again. Choose date, amount, and category."
+          }
+        format.json {
+          render json: @expense.errors,
+          status: :unprocessable_entity
+          }
       end
     end
   end
@@ -88,22 +93,32 @@ class ExpensesController < ApplicationController
 end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_expense
-      @expense = Expense.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def expense_params
-      params.require(:expense).permit(:amount, :date, :category_id, :vendor_id, :user_id, :comment, :payment_id)
-    end
+  def expense_params
+    params.require(:expense).permit(:amount, :date, :category_id, :vendor_id, :user_id, :comment, :payment_id)
+  end
 
-    def set_categories
-      if current_user
-        @categories = current_user.categories.order('description ASC')
-      else
-        @categories = []
-      end
-      @category = Category.new
+  # Use callbacks to share common setup or constraints between actions.
+  def set_expense
+    @expense = Expense.find(params[:id])
+  end
+
+  def set_categories
+    if current_user
+      @categories = current_user.categories.order('description ASC')
+    else
+      @categories = []
     end
+    @category = Category.new
+  end
+
+  def set_expenses
+    if current_user
+      @current_user_expenses =
+      # this is a temporary solution to only show current year expenses.
+      current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
+    else
+      @current_user_expenses = []
+    end
+  end
 end
