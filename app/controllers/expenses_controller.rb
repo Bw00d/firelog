@@ -8,16 +8,16 @@ class ExpensesController < ApplicationController
   def index
     @expense = Expense.new
 
-      @expenses = @current_user_expenses.where('date >= ? AND date <= ?',
+      @expenses = Expense.where('date >= ? AND date <= ?',
                                          DateTime.now.beginning_of_month,
                                  DateTime.now.end_of_month).order("date DESC")
-      @yearly_expenses = @current_user_expenses.where('date >= ? AND date <= ?',
+      @yearly_expenses = Expense.where('date >= ? AND date <= ?',
                                                 DateTime.now.beginning_of_year,
                                                 DateTime.now).order("date DESC")
       if params[:search]
-        @expenses = @current_user_expenses.search(params[:search]).order("date DESC")
+        @expenses = Expense.search(params[:search]).order("date DESC")
       else
-        @expenses = @current_user_expenses.where('date >= ? AND date <= ?',
+        @expenses = Expense.where('date >= ? AND date <= ?',
                                            DateTime.now.beginning_of_month,
                                    DateTime.now.end_of_month).order("date DESC")
       end
