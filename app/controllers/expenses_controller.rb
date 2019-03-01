@@ -21,8 +21,8 @@ class ExpensesController < ApplicationController
                                            DateTime.now.beginning_of_month,
                                    DateTime.now.end_of_month).order("date DESC")
       end
-      @dates =  @current_user_expenses.select("date").map{ |i| i.date.month }.uniq
-      @years =  @current_user_expenses.select("date").map{ |i| i.date.year }.uniq
+      @dates =  Expense.all.select("date").map{ |i| i.date.month }.uniq
+      @years =  Expense.all.select("date").map{ |i| i.date.year }.uniq
       @payments = Payment.all
   end
 
