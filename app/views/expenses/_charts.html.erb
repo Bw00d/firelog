@@ -1,23 +1,27 @@
 <!-- Bad Code! Fix Soon! -->
 <!-- May -->
-<div  class="month-chart">
-	<br>
-	<div class="chart small-12 columns">
-		<h6>DAILY SPENDING</h6>
-		<%= line_chart find_expenses_by_month(params[:search]).group(:date).sum(:amount),
-		prefix: "$",decimal: "." %>
-	</div>
-	<br>
-	<div class="chart small-12 columns">
-		<h6>AVERAGE BY CATEGORY</h6>
-		<%= pie_chart make_pie(find_expenses_by_month(params[:search]).group(:category_id).sum(:amount)),
-		prefix: "$",decimal: ".", donut: true %>
-	</div>
-
-	<div class="chart small-12 columns">
+<% if current_user %>
+	<div  class="month-chart">
 		<br>
-		<%= column_chart make_pie(find_expenses_by_month(params[:search]).group(:category_id).sum(:amount)),
-		prefix: "$",decimal: ".", donut: true %>
-	</div>
-</div>
+		<div class="chart small-12 columns">
+			<h6>DAILY SPENDING</h6>
+			<%= line_chart find_expenses_by_month(params[:search],
+																				current_user).group(:date).sum(:amount),
+			 																	prefix: "$",decimal: "." %>
+		</div>
+		<br>
+		<div class="chart small-12 columns">
+			<h6>AVERAGE BY CATEGORY</h6>
+			<%= pie_chart make_pie(find_expenses_by_month(params[:search],
+																current_user).group(:category_id).sum(:amount)),
+																prefix: "$",decimal: ".", donut: true %>
+		</div>
 
+		<div class="chart small-12 columns">
+			<br>
+			<%= column_chart make_pie(find_expenses_by_month(params[:search],
+																current_user).group(:category_id).sum(:amount)),
+																prefix: "$",decimal: ".", donut: true %>
+		</div>
+	</div>
+<% end  %>

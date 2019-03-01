@@ -10,8 +10,8 @@ module ExpensesHelper
 		expenses.pluck(:amount).sum
 	end
 
-	def find_expenses_by_month(month)
-		Expense.where('extract(month from date) = ?', month)
+	def find_expenses_by_month(month, user)
+		user.expenses.where('extract(month from date) = ?', month)
 	end
 
 	def make_pie(expenses)
