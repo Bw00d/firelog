@@ -23,6 +23,7 @@ class ExpensesController < ApplicationController
         end
         @dates =  @current_user_expenses.all.select("date").map{ |i| i.date.month }.uniq
         @years =  @current_user_expenses.all.select("date").map{ |i| i.date.year }.uniq
+        # binding.pry
       end
       @payments = Payment.all
   end
@@ -117,7 +118,7 @@ end
     if current_user
       @current_user_expenses =
       # this is a temporary solution to only show current year expenses.
-      current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
+      current_user.expenses.where('extract(year  from date) = ?', '2018')
     else
       @current_user_expenses = []
     end
