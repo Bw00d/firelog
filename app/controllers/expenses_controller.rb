@@ -118,7 +118,8 @@ end
     if current_user
       @current_user_expenses =
       # this is a temporary solution to only show current year expenses.
-      current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
+      # current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
+      current_user.expenses.where('extract(year  from date) = ?', '2018')
     else
       @current_user_expenses = []
     end
