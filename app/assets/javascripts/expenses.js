@@ -15,7 +15,7 @@ $(document).ready(function(){
 		  value = $(this).find('span.hidden-id').text();
 
 		  $('.category-button').toggleClass('unselected');
-		  $('.add-category-button').toggleClass('unselected');
+		  $('#add-category-button').toggleClass('unselected');
 
 		  $(this).toggleClass('unselected');
 
@@ -32,8 +32,10 @@ $(document).ready(function(){
 		 event.preventDefault();
    	});
     $(window).click(function() {
-      $('#category-form').hide();
-      $('.category-button').show();
+      if($('#category-form').is(':visible')){ 
+        $('#category-form').hide();
+        $('.category-button').show();
+      }
     });
 
     $('#category-input').click(function(event){

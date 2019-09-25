@@ -16,7 +16,7 @@
   <div id="category-buttons" class="small-12 columns">
     <%= f.label :category_id, "Category" %>
     <%= f.hidden_field :category_id, value: @expense.category_id %>
-    <div class="hideable">
+    <div>
       <div id="add-category-button"><%= link_to "+", expenses_path %></div>
       <% @categories.each do |category| %>
         <div class="category-button">
@@ -28,7 +28,7 @@
   </div>
 
 
-  <div class="hideable">
+  <div>
     <%= link_to fa_icon("comment"), 'javascript:;', id: "comment-icon" %>
   </div>
   

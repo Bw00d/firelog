@@ -13,7 +13,7 @@ $successGreen: #48AB6C;
   background-color: #d2d2d2;
   border: 2px solid #d2d2d2;
   float: left;
-  /*clear: all;*/
+  display:none;
   text-align: center;
   vertical-align: middle !important;
   line-height: 25px; 
@@ -76,7 +76,7 @@ $successGreen: #48AB6C;
     min-height: 65px;
 }
 .unselected {
-    display: none;
+    display: none !important;
 }
 span.hidden-id {
     display: none;
