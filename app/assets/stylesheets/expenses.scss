@@ -16,7 +16,9 @@ $successGreen: #48AB6C;
   border: 2px solid #d2d2d2;
   float: left;
   clear: all;
-
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;   
   a {
   	/*color: $successGreen;*/
     color: black;
@@ -43,7 +45,9 @@ $successGreen: #48AB6C;
     border: 2px solid #d2d2d2;
     float: left;
     clear: all;
-
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px;
     a {
       /*color: $successGreen;*/
       color: black;
