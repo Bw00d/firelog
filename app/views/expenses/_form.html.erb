@@ -16,25 +16,27 @@
   <div id="category-buttons" class="small-12 columns">
     <%= f.label :category_id, "Category" %>
     <%= f.hidden_field :category_id, value: @expense.category_id %>
-    <% @categories.each do |category| %>
-      <div class="category-button">
-        <%= link_to category.description, 'javascript:;' %>
-        <span class="hidden-id"><%= category.id %></span>
-      </div>
-      <% end %>
-    <div class="add-category-button"><%= link_to "+", expenses_path %></div>
+    <div class="hideable">
+      <% @categories.each do |category| %>
+        <div class="category-button">
+          <%= link_to category.description, 'javascript:;' %>
+          <span class="hidden-id"><%= category.id %></span>
+        </div>
+        <% end %>
+      <div id="add-category-button"><%= link_to "+", expenses_path %></div>
+    </div>
   </div>
 
 
-  <div class="">
+  <div class="hideable">
     <%= link_to fa_icon("comment"), 'javascript:;', id: "comment-icon" %>
   </div>
   
-  <div id="add-comment" class="">
+  <div id="add-comment" class="hideable">
     <%= f.label "Comment" %>
     <%= f.text_area :comment, class: "radius", autofocus: true %>
   </div>
-  <div>
+  <div class="hideable">
     <ul id="payment-type">
       <% @payments.each do |p| %>
       <li id=<%= p.id %> class="payment-logo"><%= image_tag p.logo.url(:thumb) %></li>

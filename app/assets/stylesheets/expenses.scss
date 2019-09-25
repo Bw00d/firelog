@@ -1,28 +1,57 @@
 $successGreen: #48AB6C;
 .add-category-button {
+  margin-right: 10px;
+  font-size: 2em;
+  display: inline;
+  text-align: center;
+  -moz-border-radius: 35px/35px;
+  -webkit-border-radius: 35px 35px;
+  border-radius: 35px/35px;
+  width:35px;
+  height:35px;
+  display: inline-block;
+  /*border: 2px solid $successGreen;
+  color: $successGreen;*/
+  background-color: #d2d2d2;
+  border: 2px solid #d2d2d2;
+  float: left;
+  clear: all;
+
+  a {
+  	/*color: $successGreen;*/
+    color: black;
+  }
+	span.subtext {
+		font-size: .5em !important;
+	}
+	line-height: .80em;
+}
+  #add-category-button {
     margin-right: 10px;
-	font-size: 2em;
-	display: inline;
-	text-align: center;
-	-moz-border-radius: 35px/35px;
+    font-size: 2em;
+    display: inline;
+    text-align: center;
+    -moz-border-radius: 35px/35px;
     -webkit-border-radius: 35px 35px;
     border-radius: 35px/35px;
     width:35px;
     height:35px;
     display: inline-block;
-    border: 2px solid $successGreen;
-    // background: $successGreen;
-    color: $successGreen;
+    /*border: 2px solid $successGreen;
+    color: $successGreen;*/
+    background-color: #d2d2d2;
+    border: 2px solid #d2d2d2;
     float: left;
     clear: all;
 
     a {
-    	color: $successGreen;
+      /*color: $successGreen;*/
+      color: black;
     }
-		span.subtext {
-			font-size: .5em !important;
-		}
-		line-height: .80em;
+    span.subtext {
+      font-size: .5em !important;
+    }
+    line-height: .80em;
   }
 #add-expense {
 	margin-top: 2%;
@@ -58,7 +87,7 @@ span.hidden-id {
 #add-comment {
     display: none;
 }
-// category form
+/*category form*/
 #category-form {
     background: white;
     padding: 0px;
@@ -66,7 +95,7 @@ span.hidden-id {
     float: left;
     margin: 0;
     display: none;
-    margin-top: -170px;
+    margin-top: -163px;
     margin-left: 15px;
     position: absolute;
     margin-bottom: 0;
@@ -77,8 +106,8 @@ span.hidden-id {
     position: absolute;
     padding-bottom: 5px;
     padding-right: 0px;
-    padding-left: 0px;
-    padding-top: 5px;
+    padding-left: 1px;
+    padding-top: 0px;
     font-size: 2em;
     display: inline;
     text-align: center;
@@ -88,13 +117,12 @@ span.hidden-id {
     width:35px;
     height:35px;
     display: inline-block;
-    // border: 2px solid $successGreen;
-    // color: black;
-    // background: #D2D2D2;
-    // font-weight: 700;
+    color: black;
     line-height: .60em;
-    font-size: .7em;
 }
+    a#add-cat:hover {
+      background-color: #d2d2d2;
+    }
 input#category-input {
     moz-border-radius: 40px/40px;
     -webkit-border-radius: 40px 40px;

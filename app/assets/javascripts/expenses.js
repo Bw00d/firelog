@@ -23,9 +23,10 @@ $(document).ready(function(){
 		  event.preventDefault();
 		});
 
-   $('.add-category-button').click(function(event){
+   $('#add-category-button').click(function(event){
    	$('.category-button').toggleClass('unselected');
-		 $('.add-category-button').toggleClass('unselected');
+		 $('#add-category-button').toggleClass('unselected');
+     $('.hideable').hide();
 		 $('#category-form').show();
 		 event.preventDefault();
    	});
