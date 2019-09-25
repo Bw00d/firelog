@@ -26,7 +26,6 @@ $(document).ready(function(){
    $('#add-category-button').click(function(event){
    	$('.category-button').toggleClass('unselected');
 		 $('#add-category-button').toggleClass('unselected');
-     // $('.hideable').hide();
      $('.category-button').hide();
 		 $('#category-form').show();
      $('#category-form').animate({ width: '350' }, 'fast')

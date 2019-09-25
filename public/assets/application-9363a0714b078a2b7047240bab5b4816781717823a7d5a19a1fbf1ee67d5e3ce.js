@@ -24004,15 +24004,18 @@ $(document).ready(function(){
 		  $('.add-category-button').toggleClass('unselected');
 
 		  $(this).toggleClass('unselected');
-		 
+
 		  $('#expense_category_id').val(value);
 		  event.preventDefault();
 		});
 
-   $('.add-category-button').click(function(event){
+   $('#add-category-button').click(function(event){
    	$('.category-button').toggleClass('unselected');
-		 $('.add-category-button').toggleClass('unselected');
+		 $('#add-category-button').toggleClass('unselected');
+     // $('.hideable').hide();
+     $('.category-button').hide();
 		 $('#category-form').show();
+     $('#category-form').animate({ width: '350' }, 'fast')
 		 event.preventDefault();
    	});
 
@@ -24038,6 +24041,12 @@ $(document).ready(function(){
    	event.preventDefault();
    });
 
+   // years
+   $('.years').click(function(event){
+   	$('li.years').removeClass('selected-year');
+   	$(this).addClass('selected-year');
+   	event.preventDefault();
+   });
 
 
    // retrieving month expenses
@@ -24047,8 +24056,8 @@ $(document).ready(function(){
          event.preventDefault;
          localStorage.setItem('month', $(this).val())
    });
-   
-      
+
+
 
 $(document).on("change", "select#category", function(e){
    $(this).attr("expense_vendor_id", $(this).val()); // this sets the "data-option-value" to the value
