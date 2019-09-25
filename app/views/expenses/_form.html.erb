@@ -3,7 +3,11 @@
 
   <div class="small-12 columns">
     <%= f.label :date %>
-    <%= f.text_field :date, id: "date", class: "radius", required: true %>
+    <% if mobile_device == "mobile" %>
+      <%= f.date_field :date, id: "mobile-date", class: "radius", required: true %>
+    <% else %>
+      <%= f.text_field :date, id: "date", class: "radius", required: true %>
+    <% end %>
   </div>
   <div id="amount" class="small-12 columns">
     <%= f.label :amount %>
