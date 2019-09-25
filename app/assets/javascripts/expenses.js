@@ -29,6 +29,7 @@ $(document).ready(function(){
      // $('.hideable').hide();
      $('.category-button').hide();
 		 $('#category-form').show();
+     $('#category-form').animate({ width: '350' }, 'fast')
 		 event.preventDefault();
    	});
 
