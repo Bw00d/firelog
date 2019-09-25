@@ -36,14 +36,14 @@
     <%= f.label "Comment" %>
     <%= f.text_area :comment, class: "radius", autofocus: true %>
   </div>
-  <div class="hideable">
+  <!-- <div class="hideable">
     <ul id="payment-type">
-      <% @payments.each do |p| %>
-      <li id=<%= p.id %> class="payment-logo"><%= image_tag p.logo.url(:thumb) %></li>
-      <% end %>
-      <%= f.hidden_field :payment_id, value: @expense.payment_id, id: "payment-id" %>
+      <%# @payments.each do |p| %>
+      <li id=<%#= p.id %> class="payment-logo"><%#= image_tag p.logo.url(:thumb) %></li>
+      <%# end %>
+      <%#= f.hidden_field :payment_id, value: @expense.payment_id, id: "payment-id" %>
     </ul>
-  </div>
+  </div> -->
   <div class="">
     <%= f.submit "ADD", class: 'button small radius wide-button success' %>
   </div>

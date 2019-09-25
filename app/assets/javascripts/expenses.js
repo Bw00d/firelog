@@ -26,7 +26,8 @@ $(document).ready(function(){
    $('#add-category-button').click(function(event){
    	$('.category-button').toggleClass('unselected');
 		 $('#add-category-button').toggleClass('unselected');
-     $('.hideable').hide();
+     // $('.hideable').hide();
+     $('.category-button').hide();
 		 $('#category-form').show();
 		 event.preventDefault();
    	});
