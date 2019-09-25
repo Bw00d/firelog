@@ -13,10 +13,10 @@ $successGreen: #48AB6C;
   background-color: #d2d2d2;
   border: 2px solid #d2d2d2;
   float: left;
-  clear: all;
+  /*clear: all;*/
   text-align: center;
-  vertical-align: middle;
-  line-height: 35px; 
+  vertical-align: middle !important;
+  line-height: 25px; 
   font-weight: 300;  
   a {
     color: black;
@@ -24,7 +24,6 @@ $successGreen: #48AB6C;
 	span.subtext {
 		font-size: .5em !important;
 	}
-	line-height: .80em;
 }
   #add-category-button {
     margin-right: 10px;
@@ -40,10 +39,10 @@ $successGreen: #48AB6C;
     background-color: #d2d2d2;
     border: 2px solid #d2d2d2;
     float: left;
-    clear: all;
+    /*clear: all;*/
     text-align: center;
-    vertical-align: middle;
-    line-height: 35px;
+    vertical-align: middle !important;
+    line-height: 25px;
     font-weight: 300; 
     a {
       color: black;
@@ -51,7 +50,6 @@ $successGreen: #48AB6C;
     span.subtext {
       font-size: .5em !important;
     }
-    line-height: .80em;
   }
 #add-expense {
 	margin-top: 2%;
