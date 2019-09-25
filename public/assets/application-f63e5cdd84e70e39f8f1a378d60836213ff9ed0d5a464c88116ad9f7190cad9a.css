@@ -13342,27 +13342,66 @@ section {
   width: 35px;
   height: 35px;
   display: inline-block;
-  border: 2px solid #48AB6C;
-  color: #48AB6C;
+  /*border: 2px solid $successGreen;
+  color: $successGreen;*/
+  background-color: #d2d2d2;
+  border: 2px solid #d2d2d2;
   float: left;
   clear: all;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
   line-height: .80em;
 }
-/* line 19, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
-.add-category-button a {
-  color: #48AB6C;
-}
 /* line 22, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.add-category-button a {
+  /*color: $successGreen;*/
+  color: black;
+}
+/* line 26, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .add-category-button span.subtext {
   font-size: .5em !important;
 }
 
-/* line 27, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 31, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+#add-category-button {
+  margin-right: 10px;
+  font-size: 2em;
+  display: inline;
+  text-align: center;
+  -moz-border-radius: 35px/35px;
+  -webkit-border-radius: 35px 35px;
+  border-radius: 35px/35px;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  /*border: 2px solid $successGreen;
+  color: $successGreen;*/
+  background-color: #d2d2d2;
+  border: 2px solid #d2d2d2;
+  float: left;
+  clear: all;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  line-height: .80em;
+}
+/* line 51, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+#add-category-button a {
+  /*color: $successGreen;*/
+  color: black;
+}
+/* line 55, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+#add-category-button span.subtext {
+  font-size: .5em !important;
+}
+
+/* line 60, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 #add-expense {
   margin-top: 2%;
 }
 
-/* line 31, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 64, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .category-button {
   background: #D2D2D2;
   -moz-border-radius: 40px/40px;
@@ -13373,12 +13412,12 @@ section {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-/* line 39, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 72, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .category-button a {
   color: black;
 }
 
-/* line 45, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 78, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 #category-buttons {
   display: relative;
   display: block;
@@ -13386,44 +13425,45 @@ section {
   min-height: 65px;
 }
 
-/* line 51, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 84, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .unselected {
   display: none;
 }
 
-/* line 54, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 87, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 span.hidden-id {
   display: none;
 }
 
-/* line 58, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 91, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 #add-comment {
   display: none;
 }
 
-/* line 62, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/*category form*/
+/* line 95, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 #category-form {
   background: white;
   padding: 0px;
-  width: 350px;
+  width: 35px;
   float: left;
   margin: 0;
   display: none;
-  margin-top: -170px;
-  margin-left: 15px;
+  margin-top: -188px;
+  margin-left: 0px;
   position: absolute;
   margin-bottom: 0;
 }
 
-/* line 74, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 107, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 #add-cat {
   margin-top: -36px;
   margin-left: 314px;
   position: absolute;
   padding-bottom: 5px;
   padding-right: 0px;
-  padding-left: 0px;
-  padding-top: 5px;
+  padding-left: 1px;
+  padding-top: 0px;
   font-size: 2em;
   display: inline;
   text-align: center;
@@ -13433,11 +13473,16 @@ span.hidden-id {
   width: 35px;
   height: 35px;
   display: inline-block;
+  color: black;
   line-height: .60em;
-  font-size: .7em;
 }
 
-/* line 98, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 127, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+a#add-cat:hover {
+  background-color: #d2d2d2;
+}
+
+/* line 130, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 input#category-input {
   moz-border-radius: 40px/40px;
   -webkit-border-radius: 40px 40px;
@@ -13446,26 +13491,26 @@ input#category-input {
   margin-bottom: 0;
 }
 
-/* line 113, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 145, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .expense {
   font-size: .75em;
 }
 
-/* line 116, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 148, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .expense-amount {
   text-align: right;
 }
 
-/* line 119, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 151, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .delete-expense {
   color: red;
 }
-/* line 121, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 153, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .delete-expense a {
   color: red;
 }
 
-/* line 126, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 158, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 li.months {
   list-style: none;
   background: #D2D2D2;
@@ -13477,21 +13522,21 @@ li.months {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-/* line 135, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 167, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 li.months a {
   color: black;
 }
 
-/* line 140, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 172, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .selected-month {
   background-color: #4b4b4b !important;
 }
-/* line 142, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 174, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .selected-month a {
   color: white !important;
 }
 
-/* line 146, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 178, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 li.years {
   display: inline-block !important;
   list-style: none;
@@ -13504,21 +13549,21 @@ li.years {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-/* line 156, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 188, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 li.years a {
   color: black;
 }
 
-/* line 161, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 193, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .selected-year {
   background-color: #4b4b4b !important;
 }
-/* line 163, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 195, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .selected-year a {
   color: white !important;
 }
 
-/* line 168, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+/* line 200, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 #month-header {
   font-weight: bold;
 }
