@@ -24009,12 +24009,29 @@ $(document).ready(function(){
 		  event.preventDefault();
 		});
 
-   $('.add-category-button').click(function(event){
+   $('#add-category-button').click(function(event){
    	$('.category-button').toggleClass('unselected');
-		 $('.add-category-button').toggleClass('unselected');
+		 $('#add-category-button').toggleClass('unselected');
+     $('.category-button').hide();
 		 $('#category-form').show();
+     $('#category-form').animate({ width: '350' }, 'fast')
 		 event.preventDefault();
    	});
+    $(window).click(function() {
+      $('#category-form').hide();
+      $('.category-button').show();
+    });
+
+    $('#category-input').click(function(event){
+        event.stopPropagation();
+    });
+    $('#add-category-button').click(function(event){
+        event.stopPropagation();
+    });
+    $('#add-cat').click(function(event){
+        event.stopPropagation();
+    });
+
 
    $('#comment-icon').click(function(event){
    	$('#add-comment').show();
