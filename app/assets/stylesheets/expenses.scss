@@ -13,7 +13,7 @@ $successGreen: #48AB6C;
   background-color: #d2d2d2;
   border: 2px solid #d2d2d2;
   float: left;
-  display:none;
+  display: none;
   text-align: center;
   vertical-align: middle !important;
   line-height: 25px; 
@@ -194,3 +194,68 @@ li.years {
 #month-header {
     font-weight: bold;
 }
+.validation-box {
+  display: none;
+  padding: 7px;
+  font-size: .9em;
+  width:220px;
+  height: 40px;
+  border: 1px solid #444;
+  border-radius:3px;
+  /*overflow: hidden;*/
+  background-color: white;
+  z-index: 10 !important;
+  float: left;
+  margin-left: -110px;
+  left: 50%;
+  margin-top: -50px;
+  position: fixed;
+  /*display: inline;*/
+    -moz-box-shadow:    2px 2px 3px 2px #ccc;
+    -webkit-box-shadow: 2px 2px 3px 2px #ccc;
+    box-shadow:         2px 2px 3px 2px #ccc;
+  .orange-square {
+    height: 25px;
+    width: 25px;
+    background-color: orange;
+    display: inline-block;
+    padding-top: 2px;
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 2px;
+  }
+  i {
+    color: white;
+    font-size: 1.2em
+  }
+  .arrow_box {
+    position: relative;
+    background: white;
+    margin-top: 6px;
+    /*border: 1px solid #444;*/
+    }
+  .arrow_box:after, .arrow_box:before {
+    top: 50%;
+    left: 20%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .arrow_box:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: white;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+  .arrow_box:before {
+    border-color: rgba(68, 68, 68, 0);
+    border-top-color: #444;
+    border-width: 11px;
+    margin-left: -11px;
+  }
+}
+

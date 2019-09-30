@@ -15,8 +15,12 @@
   </div>
   <div id="category-buttons" class="small-12 columns">
     <%= f.label :category_id, "Category" %>
-    <%= f.hidden_field :category_id, value: @expense.category_id %>
+    <%= f.hidden_field :category_id, id: "category-field", value: @expense.category_id %>
     <div>
+    <div class="validation-box">
+
+      <div class="orange-square"><%= fa_icon('exclamation') %></div>
+        Please choose a category.<div class="arrow_box"></div></div> 
       <div id="add-category-button"><%= link_to "+", expenses_path %></div>
       <% @categories.each do |category| %>
         <div class="category-button">
@@ -45,7 +49,7 @@
     </ul>
   </div> -->
   <div class="">
-    <%= f.submit "ADD", class: 'button small radius wide-button success' %>
+    <%= f.submit "ADD", id: "submit-expense", class: 'button small radius wide-button success' %>
   </div>
 <% end %>
 

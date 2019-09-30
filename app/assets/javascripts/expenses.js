@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 		  $(this).toggleClass('unselected');
 
-		  $('#expense_category_id').val(value);
+		  $('#category-field').val(value);
 		  event.preventDefault();
 		});
 
@@ -85,6 +85,15 @@ $(document).ready(function(){
          $('#search-form').submit();
          event.preventDefault;
          localStorage.setItem('month', $(this).val())
+   });
+
+   // validating category
+   
+   $('#submit-expense').click(function(event){
+        if ($('#category-field').val() == "") {
+          event.preventDefault();
+          $('.validation-box').show().delay(2000).fadeOut();
+      }
    });
 
 
