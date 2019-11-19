@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @expenditure.amount %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @expenditure.due_date %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @expenditure.comment %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @expenditure.user_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @expenditure.description %>
+</p>
+
+<%= link_to 'Edit', edit_expenditure_path(@expenditure) %> |
+<%= link_to 'Back', expenditures_path %>
