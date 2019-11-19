@@ -10988,6 +10988,28 @@ section {
   color: #3C763D;
   border-color: #D6E9C6;
 }
+/* line 1, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+.wish-item {
+  border: 1px solid #F1F3F4;
+  padding: 10px 20px !important;
+  margin-bottom: 10px !important;
+}
+
+/* line 6, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+div.wish-item:hover {
+  background-color: #F1F3F4;
+}
+
+/* line 9, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+#expenditure-form {
+  display: none;
+}
+
+/* line 12, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+#expenditures {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 /* line 2, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .add-category-button {
   margin-right: 10px;
@@ -11218,6 +11240,77 @@ li.years a {
 /* line 194, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 #month-header {
   font-weight: bold;
+}
+
+/* line 197, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.validation-box {
+  display: none;
+  padding: 7px;
+  font-size: .9em;
+  width: 220px;
+  height: 40px;
+  border: 1px solid #444;
+  border-radius: 3px;
+  /*overflow: hidden;*/
+  background-color: white;
+  z-index: 10 !important;
+  float: left;
+  margin-left: -110px;
+  left: 50%;
+  margin-top: -50px;
+  position: fixed;
+  /*display: inline;*/
+  -moz-box-shadow: 2px 2px 3px 2px #ccc;
+  -webkit-box-shadow: 2px 2px 3px 2px #ccc;
+  box-shadow: 2px 2px 3px 2px #ccc;
+}
+/* line 217, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.validation-box .orange-square {
+  height: 25px;
+  width: 25px;
+  background-color: orange;
+  display: inline-block;
+  padding-top: 2px;
+  text-align: center;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+/* line 227, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.validation-box i {
+  color: white;
+  font-size: 1.2em;
+}
+/* line 231, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.validation-box .arrow_box {
+  position: relative;
+  background: white;
+  margin-top: 6px;
+  /*border: 1px solid #444;*/
+}
+/* line 237, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.validation-box .arrow_box:after, .validation-box .arrow_box:before {
+  top: 50%;
+  left: 20%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 248, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.validation-box .arrow_box:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: white;
+  border-width: 10px;
+  margin-left: -10px;
+}
+/* line 254, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.validation-box .arrow_box:before {
+  border-color: rgba(68, 68, 68, 0);
+  border-top-color: #444;
+  border-width: 11px;
+  margin-left: -11px;
 }
 /* line 1, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/payments.scss */
 #payment-type {
