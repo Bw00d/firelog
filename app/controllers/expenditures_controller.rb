@@ -62,7 +62,7 @@ class ExpendituresController < ApplicationController
   def destroy
     @expenditure.destroy
     respond_to do |format|
-      format.html { redirect_to expenditures_url, notice: 'Expenditure was successfully destroyed.' }
+      format.html { redirect_to expenditures_url }
       format.json { head :no_content }
     end
   end
