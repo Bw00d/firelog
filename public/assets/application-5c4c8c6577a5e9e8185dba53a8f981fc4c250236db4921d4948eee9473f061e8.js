@@ -23984,6 +23984,16 @@ Copyright © 2018 Basecamp, LLC
 
 
 }).call(this);
+$( document ).on('turbolinks:load', function(){
+  $('#new-expenditure-button').click(function() {
+    $('#expenditure-form').show();
+    $(this).hide();
+  });
+  $('#hide-expenditure-button').click(function() {
+    $('#expenditure-form').hide();
+    $('#new-expenditure-button').show();
+  });
+});
 $(document).ready(function(){
 
    var month = localStorage.getItem('month')
@@ -23995,6 +24005,7 @@ $(document).ready(function(){
 
    // date picker
    $("#date").fdatepicker({format: 'yyyy-mm-dd'});
+   $("#due-date").fdatepicker({format: 'yyyy-mm-dd'});
 
    // category
    $('.category-button').click(function(event){
@@ -24005,7 +24016,7 @@ $(document).ready(function(){
 
 		  $(this).toggleClass('unselected');
 
-		  $('#expense_category_id').val(value);
+		  $('#category-field').val(value);
 		  event.preventDefault();
 		});
 
@@ -24071,6 +24082,15 @@ $(document).ready(function(){
          $('#search-form').submit();
          event.preventDefault;
          localStorage.setItem('month', $(this).val())
+   });
+
+   // validating category
+   
+   $('#submit-expense').click(function(event){
+        if ($('#category-field').val() == "") {
+          event.preventDefault();
+          $('.validation-box').show().delay(2000).fadeOut();
+      }
    });
 
 
