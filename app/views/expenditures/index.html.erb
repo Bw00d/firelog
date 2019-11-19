@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="small-12 columns">
+    <div class="row">
+      <div id="new-expenditure-button" class="button tiny radius">NEW EXPENDITURE</div>
+    </div>
+    <div id="expenditure-form">
+      <%= render 'form' %>
+    </div>
     <% @expenditures.each do |e| %>
     <div class=" row wish-item">
       <div class="small-3 columns"><h5><%= link_to e.description, e %></h5></div>

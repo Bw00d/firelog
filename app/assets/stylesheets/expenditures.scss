@@ -1,4 +1,11 @@
 .wish-item {
   border: 1px solid #F1F3F4;
   padding: 10px 20px !important;
+  margin-bottom: 10px !important;
+}
+div.wish-item:hover {
+  background-color: #F1F3F4;
+}
+#expenditure-form {
+  display: none;
 }

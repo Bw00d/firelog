@@ -9,6 +9,7 @@ $(document).ready(function(){
 
    // date picker
    $("#date").fdatepicker({format: 'yyyy-mm-dd'});
+   $("#due-date").fdatepicker({format: 'yyyy-mm-dd'});
 
    // category
    $('.category-button').click(function(event){

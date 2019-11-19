@@ -4,6 +4,7 @@ class ExpendituresController < ApplicationController
   # GET /expenditures
   # GET /expenditures.json
   def index
+    @expenditure = Expenditure.new
     @expenditures = Expenditure.all
   end
 
@@ -28,11 +29,16 @@ class ExpendituresController < ApplicationController
 
     respond_to do |format|
       if @expenditure.save
-        format.html { redirect_to @expenditure, notice: 'Expenditure was successfully created.' }
+        format.html { redirect_to :back }
         format.json { render :show, status: :created, location: @expenditure }
       else
-        format.html { render :new }
-        format.json { render json: @expenditure.errors, status: :unprocessable_entity }
+        format.html { render :back,
+          alert: "Oops, try that again. Enter due date, amount, and description." 
+          }
+        format.json { 
+          render json: @expenditure.errors, 
+          status: :unprocessable_entity 
+          }
       end
     end
   end

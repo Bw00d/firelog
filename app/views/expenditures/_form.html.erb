@@ -1,42 +1,45 @@
-<%= form_for(expenditure) do |f| %>
-  <% if expenditure.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(expenditure.errors.count, "error") %> prohibited this expenditure from being saved:</h2>
+<div class="row">
+<div id="hide-expenditure-button" class="button tiny radius secondary">CANCEL</div>
+  
+  <%= form_for @expenditure do |f| %>
+    <% if @expenditure.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@expenditure.errors.count, "error") %> prohibited this item from being saved:</h2>
 
-      <ul>
-      <% expenditure.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <ul>
+        <% @expenditure.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: "radius", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :amount %>
+      <%= f.text_field :amount, class: "radius", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :due_date %>
+      <% if mobile_device == "mobile" %>
+        <%= f.date_field :due_date, id: "mobile-due-date", class: "radius", required: true %>
+      <% else %>
+        <%= f.text_field :due_date, id: "due-date", class: "radius", required: true %>
       <% end %>
-      </ul>
+    </div>
+
+    <div class="field">
+      <%= f.label :comment %>
+      <%= f.text_area :comment, class: "radius" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'ADD', class: 'button small radius wide-button success' %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :amount %>
-    <%= f.text_field :amount %>
-  </div>
-
-  <div class="field">
-    <%= f.label :due_date %>
-    <%= f.date_select :due_date %>
-  </div>
-
-  <div class="field">
-    <%= f.label :comment %>
-    <%= f.text_area :comment %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
