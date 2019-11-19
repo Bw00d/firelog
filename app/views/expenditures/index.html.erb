@@ -11,7 +11,7 @@
     <div class=" row wish-item">
       <div class="small-3 columns"><h5><%= link_to e.description, e %></h5></div>
       <div class="small-3 columns text-right"><h5><%= number_to_currency(e.amount) %></h5></div>
-      <div class="small-4 columns text-right"><h5><%= e.due_date.try(:strftime, '%B) %></h5></div>
+      <div class="small-4 columns text-right"><h5><%= e.due_date.try(:strftime, '%B') %></h5></div>
       <div class="small-1 columns"><h5><%= link_to fa_icon("times"), e, method: :delete, 
                                                                         data: { confirm: 'Are you sure?' }, 
                                                                         class: "right delete-expense" %></h5></div>
