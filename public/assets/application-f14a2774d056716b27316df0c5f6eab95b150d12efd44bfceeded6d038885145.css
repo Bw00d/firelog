@@ -10988,6 +10988,34 @@ section {
   color: #3C763D;
   border-color: #D6E9C6;
 }
+/* line 1, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+.wish-item {
+  border: 1px solid #F1F3F4;
+  padding: 10px 20px !important;
+  margin-bottom: 10px !important;
+}
+
+/* line 6, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+div.wish-item:hover {
+  background-color: #F1F3F4;
+}
+
+/* line 9, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+#expenditure-form {
+  display: none;
+}
+
+/* line 12, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+#expenditures {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 16, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+#new-expenditure-button {
+  border-radius: 45px;
+  background-color: black;
+}
 /* line 2, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .add-category-button {
   margin-right: 10px;
@@ -11289,6 +11317,11 @@ li.years a {
   border-top-color: #444;
   border-width: 11px;
   margin-left: -11px;
+}
+
+/* line 261, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.rounded {
+  border-radius: 45px !important;
 }
 /* line 1, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/payments.scss */
 #payment-type {
