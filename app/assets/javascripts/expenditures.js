@@ -1,4 +1,4 @@
-$( document ).on('turbolinks:load', function(){
+$(document).on('turbolinks:load', function(){
   $('#new-expenditure-button').click(function() {
     $('#expenditure-form').show();
     $(this).hide();

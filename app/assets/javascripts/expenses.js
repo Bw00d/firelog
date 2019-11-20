@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
+$( document ).on('turbolinks:load', function(){
    var month = localStorage.getItem('month')
    $('li.months').filter(function(){return this.value == month}).addClass('selected-month');
    $('#month-header').text($('li.selected-month').text());

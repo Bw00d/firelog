@@ -23984,8 +23984,17 @@ Copyright © 2018 Basecamp, LLC
 
 
 }).call(this);
-$(document).ready(function(){
-
+$(document).on('turbolinks:load', function(){
+  $('#new-expenditure-button').click(function() {
+    $('#expenditure-form').show();
+    $(this).hide();
+  });
+  $('#hide-expenditure-button').click(function() {
+    $('#expenditure-form').hide();
+    $('#new-expenditure-button').show();
+  });
+});
+$( document ).on('turbolinks:load', function(){
    var month = localStorage.getItem('month')
    $('li.months').filter(function(){return this.value == month}).addClass('selected-month');
    $('#month-header').text($('li.selected-month').text());
@@ -23995,6 +24004,7 @@ $(document).ready(function(){
 
    // date picker
    $("#date").fdatepicker({format: 'yyyy-mm-dd'});
+   $("#due-date").fdatepicker({format: 'yyyy-mm-dd'});
 
    // category
    $('.category-button').click(function(event){
