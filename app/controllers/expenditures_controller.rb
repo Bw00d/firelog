@@ -5,7 +5,7 @@ class ExpendituresController < ApplicationController
   # GET /expenditures.json
   def index
     @expenditure = Expenditure.new
-    @expenditures = Expenditure.all
+    @expenditures = Expenditure.all.order('due_date ASC')
   end
 
   # GET /expenditures/1
