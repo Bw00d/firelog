@@ -5,4 +5,9 @@ module ApplicationHelper
     return "mobile" if agent =~ /Mobile/
     return "desktop"
   end
+  def total(array)
+    total = 0
+    array.each { |n| total += n.amount }
+    total
+  end
 end
