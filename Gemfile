@@ -17,7 +17,7 @@ gem "paperclip", "~> 6.0.0"
 gem 'aws-sdk-s3'
 gem 'jquery-validation-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'devise'
+gem "devise", ">= 4.7.1"
 gem 'foundation-rails', '~> 5.5'
 gem 'high_voltage'
 gem 'pg'
