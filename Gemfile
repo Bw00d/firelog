@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.7'
 
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails', '~> 5.0.7', '>= 5.0.7.1'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -21,6 +21,7 @@ gem "devise", ">= 4.7.1"
 gem 'foundation-rails', '~> 5.5'
 gem 'high_voltage'
 gem 'pg'
+gem "actionview", ">= 5.0.7.2"
 
 
 group :development do
