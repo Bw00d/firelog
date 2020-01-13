@@ -23980,11 +23980,7 @@ Copyright © 2018 Basecamp, LLC
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
-(function() {
-
-
-}).call(this);
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   $('#new-expenditure-button').click(function() {
     $('#expenditure-form').show();
     $(this).hide();
@@ -23994,8 +23990,7 @@ $(document).ready(function(){
     $('#new-expenditure-button').show();
   });
 });
-$(document).ready(function(){
-
+$( document ).on('turbolinks:load', function(){
    var month = localStorage.getItem('month')
    $('li.months').filter(function(){return this.value == month}).addClass('selected-month');
    $('#month-header').text($('li.selected-month').text());
