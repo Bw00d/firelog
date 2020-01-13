@@ -22,12 +22,14 @@
       <div class="orange-square"><%= fa_icon('exclamation') %></div>
         Please choose a category.<div class="arrow_box"></div></div> 
       <div id="add-category-button"><%= link_to "+", expenses_path %></div>
+      <!-- Begin display categories -->
       <% @categories.each do |category| %>
         <div class="category-button">
           <%= link_to category.description, 'javascript:;' %>
           <span class="hidden-id"><%= category.id %></span>
         </div>
         <% end %>
+      <!-- End display categories -->
     </div>
   </div>
 
@@ -40,6 +42,8 @@
     <%= f.label "Comment" %>
     <%= f.text_area :comment, class: "radius", autofocus: true %>
   </div>
+
+  <!-- This is available to display payment type. I find it unnecessary -->
   <!-- <div class="hideable">
     <ul id="payment-type">
       <%# @payments.each do |p| %>
@@ -48,6 +52,7 @@
       <%#= f.hidden_field :payment_id, value: @expense.payment_id, id: "payment-id" %>
     </ul>
   </div> -->
+
   <div class="">
     <%= f.submit "ADD", id: "submit-expense", class: 'button small rounded wide-button success' %>
   </div>
