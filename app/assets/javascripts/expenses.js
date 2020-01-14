@@ -2,6 +2,9 @@ $( document ).on('turbolinks:load', function(){
    var month = localStorage.getItem('month')
    $('li.months').filter(function(){return this.value == month}).addClass('selected-month');
    $('#month-header').text($('li.selected-month').text());
+   var year = localStorage.getItem('year')
+   $('li.years').filter(function(){return this.value == year}).addClass('selected-month');
+   
 
 
 	$(".selectize").selectize();
@@ -85,6 +88,14 @@ $( document ).on('turbolinks:load', function(){
          $('#search-form').submit();
          event.preventDefault;
          localStorage.setItem('month', $(this).val())
+   });
+
+   // retrieving expenses by year
+   $('li.years').click(function(event){
+      $('#search-field').val($(this).val());
+         $('#search-form').submit();
+         event.preventDefault;
+         localStorage.setItem('year', $(this).val())
    });
 
    // validating category
