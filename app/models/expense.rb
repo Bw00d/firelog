@@ -21,6 +21,14 @@ has_one :payment
  		where('extract(month from date) = ?', "#{search}")
 	end
 
+  def self.year(year)
+    where('extract(year from date) = ?', "#{year}")
+  end
+
+  def self.month(month)
+    where('extract(month from date) = ?', "#{month}")
+  end
+
 	# scope :jan, -> {where(:date => Date.new(1).all_month) }
 	# scope :feb, -> {where(:date => Date.new(2).all_month) }
 	# scope :mar, -> {where(:date => Date.new(3).all_month) }

@@ -84,18 +84,18 @@ $( document ).on('turbolinks:load', function(){
 
    // retrieving month expenses
    $('li.months').click(function(event){
-      $('#search-field').val($(this).val());
-         $('#search-form').submit();
-         event.preventDefault;
-         localStorage.setItem('month', $(this).val())
+      localStorage.setItem('month', $(this).val())
+      $('#month-field').val(localStorage.getItem('month'));
+      $('#search-form').submit();
+      event.preventDefault;
    });
 
    // retrieving expenses by year
    $('li.years').click(function(event){
-      $('#search-field').val($(this).val());
-         $('#search-form').submit();
-         event.preventDefault;
-         localStorage.setItem('year', $(this).val())
+      localStorage.setItem('year', $(this).val())
+      $('#year-field').val(localStorage.getItem('year'));
+      $('#search-form').submit();
+      event.preventDefault;
    });
 
    // validating category

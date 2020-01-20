@@ -14,16 +14,25 @@ class ExpensesController < ApplicationController
       @yearly_expenses = @current_user_expenses.where('date >= ? AND date <= ?',
                                                 DateTime.now.beginning_of_year,
                                                 DateTime.now).order("date DESC")
-      if params[:search]
-        @expenses = @current_user_expenses.search(params[:search]).order("date DESC")
-      else
-        @expenses = @current_user_expenses.where('date >= ? AND date <= ?',
-                                           DateTime.now.beginning_of_month,
-                                   DateTime.now.end_of_month).order("date DESC")
+      # if params[:search]
+      #   @expenses = @current_user_expenses.search(params[:search]).order("date DESC")
+      #   if @seach_year
+      #     @yearly_expenses = @search_year.search(params[:search]).order("date DESC")
+      #   end
+      # else
+      #   @expenses = @current_user_expenses.where('date >= ? AND date <= ?',
+      #                                      DateTime.now.beginning_of_month,
+      #                              DateTime.now.end_of_month).order("date DESC")
+      # end
+      if params[:year]
+        @expenses = @current_user_expenses.year(params[:year]).order("date DESC")
       end
-      @dates =  @current_user_expenses.all.select("date").map{ |i| i.date.month }.uniq
+      if params[:month]
+        @expenses = @expenses.month(params[:month]).order("date DESC")
+      end
+      @yearly_expenses = @current_user_expenses.year(params[:year]).order("date DESC")
+      @dates =  @yearly_expenses.all.select("date").map{ |i| i.date.month }.uniq
       @years =  @current_user_expenses.all.select("date").map{ |i| i.date.year }.uniq
-      # binding.pry
     end
     @payments = Payment.all
   end
@@ -38,7 +47,7 @@ class ExpensesController < ApplicationController
     @expense = Expense.new
   end
 
-  # GET /expenses/1/edit
+  # GET /expenses/1/ediź
   def edit
   end
 
@@ -92,7 +101,7 @@ class ExpensesController < ApplicationController
     respond_to do |format|
         format.js
     end
-end
+  end
 
   private
 
@@ -116,9 +125,10 @@ end
 
   def set_expenses
     if current_user
-      @current_user_expenses =
-      # this is a temporary solution to only show current year expenses.
-      current_user.expenses
+      @current_user_expenses = current_user.expenses
+      if params[:search] && params[:search].to_i > 12
+        @search_year = current_user.expenses.where('extract(year  from date) = ?', params[:search])
+      end
       # current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
       # current_user.expenses.where('extract(year  from date) = ?', '2019')
     else

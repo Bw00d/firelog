@@ -23,7 +23,9 @@
 
   <div id="expenses-list" class="">
     <%= form_tag(expenses_path, :method => "get", id: "search-form") do %>
-      <%= hidden_field_tag :search, params[:search], id: "search-field" %>
+      <%#= hidden_field_tag :search, params[:search], id: "search-field" %>
+      <%= hidden_field_tag :year, params[:year], id: "year-field" %>
+      <%= hidden_field_tag :month, params[:month], id: "month-field" %>
     <% end %>
     <%= render 'monthly_expenses', locals: { expenses: @expenses} %>
   </div>
