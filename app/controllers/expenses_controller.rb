@@ -30,7 +30,7 @@ class ExpensesController < ApplicationController
       if params[:month]
         @expenses = @expenses.month(params[:month]).order("date DESC")
       end
-      # @yearly_expenses = @current_user_expenses.year(params[:year]).order("date DESC")
+      @yearly_expenses = @current_user_expenses.year(params[:year]).order("date DESC")
       @dates =  @yearly_expenses.all.select("date").map{ |i| i.date.month }.uniq
       @years =  @current_user_expenses.all.select("date").map{ |i| i.date.year }.uniq
     end
