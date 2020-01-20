@@ -23994,6 +23994,9 @@ $( document ).on('turbolinks:load', function(){
    var month = localStorage.getItem('month')
    $('li.months').filter(function(){return this.value == month}).addClass('selected-month');
    $('#month-header').text($('li.selected-month').text());
+   var year = localStorage.getItem('year')
+   $('li.years').filter(function(){return this.value == year}).addClass('selected-month');
+   
 
 
 	$(".selectize").selectize();
@@ -24073,10 +24076,20 @@ $( document ).on('turbolinks:load', function(){
 
    // retrieving month expenses
    $('li.months').click(function(event){
-      $('#search-field').val($(this).val());
-         $('#search-form').submit();
-         event.preventDefault;
-         localStorage.setItem('month', $(this).val())
+      localStorage.setItem('month', $(this).val())
+      $('#month-field').val(localStorage.getItem('month'));
+      $('#year-field').val(localStorage.getItem('year'));
+      $('#search-form').submit();
+      event.preventDefault;
+   });
+
+   // retrieving expenses by year
+   $('li.years').click(function(event){
+      localStorage.setItem('year', $(this).val())
+      $('#year-field').val(localStorage.getItem('year'));
+      $('#month-field').val(localStorage.getItem('month'));
+      $('#search-form').submit();
+      event.preventDefault;
    });
 
    // validating category
