@@ -24,13 +24,15 @@ class ExpensesController < ApplicationController
       #                                      DateTime.now.beginning_of_month,
       #                              DateTime.now.end_of_month).order("date DESC")
       # end
-      if params[:year]
+      if params[:year] 
         @expenses = @current_user_expenses.year(params[:year]).order("date DESC")
       end
-      if params[:month]
+      if params[:month] 
         @expenses = @expenses.month(params[:month]).order("date DESC")
       end
-      @yearly_expenses = @current_user_expenses.year(params[:year]).order("date DESC")
+      unless params[:year] == ""
+        @yearly_expenses = @current_user_expenses.year(params[:year]).order("date DESC")
+      end
       @dates =  @yearly_expenses.all.select("date").map{ |i| i.date.month }.uniq
       @years =  @current_user_expenses.all.select("date").map{ |i| i.date.year }.uniq
     end
