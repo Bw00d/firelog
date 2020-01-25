@@ -128,13 +128,14 @@ class ExpensesController < ApplicationController
   def set_expenses
     if current_user
       @current_user_expenses = current_user.expenses
-      if params[:search] && params[:search].to_i > 12
-        @search_year = current_user.expenses.where('extract(year  from date) = ?', params[:search])
-      end
-      # current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
-      # current_user.expenses.where('extract(year  from date) = ?', '2019')
-    else
-      @current_user_expenses = []
+    #   if params[:search] && params[:search].to_i > 12
+    #     @search_year = current_user.expenses.where('extract(year  from date) = ?', params[:year])
+    #   end
+    #   # current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
+    #   # current_user.expenses.where('extract(year  from date) = ?', '2019')
+    # else
+    #   @current_user_expenses = []
+    # end
     end
   end
 end
