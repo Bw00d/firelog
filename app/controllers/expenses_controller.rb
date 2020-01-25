@@ -30,7 +30,7 @@ class ExpensesController < ApplicationController
       if params[:month] 
         @expenses = @expenses.month(params[:month]).order("date DESC")
       end
-      unless params[:year] == ""
+      unless params[:year] == "" || params[:year] == nil
         @yearly_expenses = @current_user_expenses.year(params[:year]).order("date DESC")
       end
       @dates =  @yearly_expenses.all.select("date").map{ |i| i.date.month }.uniq
@@ -128,14 +128,6 @@ class ExpensesController < ApplicationController
   def set_expenses
     if current_user
       @current_user_expenses = current_user.expenses
-    #   if params[:search] && params[:search].to_i > 12
-    #     @search_year = current_user.expenses.where('extract(year  from date) = ?', params[:year])
-    #   end
-    #   # current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
-    #   # current_user.expenses.where('extract(year  from date) = ?', '2019')
-    # else
-    #   @current_user_expenses = []
-    # end
     end
   end
 end
