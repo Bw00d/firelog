@@ -1,4 +1,12 @@
 <%= content_for :title, "Firelog" %>
+<script type="text/javascript">
+  if (localStorage.getItem('year') == "") {
+    localStorage.setItem('year', 0)
+  }
+  if (localStorage.getItem('month') == "") {
+    localStorage.setItem('month', 0)
+  }
+</script>
 <% unless signed_in? %>
 
   <div  class="row">
