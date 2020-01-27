@@ -1,7 +1,10 @@
 <%= content_for :title, "Firelog" %>
 <script type="text/javascript">
-  if (localStorage.getItem('year') == "") {
-    localStorage.setItem('year', 0)
+  var d = new Date();
+  var n = d.getFullYear();
+  var set_year = localStorage.getItem('year');
+  if (set_year == "" || set_year === null ) {
+    localStorage.setItem('year', n)
   }
   if (localStorage.getItem('month') == "") {
     localStorage.setItem('month', 0)
