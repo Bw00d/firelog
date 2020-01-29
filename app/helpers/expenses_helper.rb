@@ -10,8 +10,8 @@ module ExpensesHelper
 		expenses.pluck(:amount).sum
 	end
 
-	def find_expenses_by_month(month, user)
-		expenses = current_user.expenses.where('extract(year  from date) = ?', Date.current.year)
+	def find_expenses_by_month(year, month, user)
+		expenses = current_user.expenses.where('extract(year  from date) = ?', year)
 		expenses.where('extract(month from date) = ?', month)
 	end
 
