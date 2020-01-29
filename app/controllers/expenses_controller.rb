@@ -14,16 +14,6 @@ class ExpensesController < ApplicationController
       @yearly_expenses = @current_user_expenses.where('date >= ? AND date <= ?',
                                                 DateTime.now.beginning_of_year,
                                                 DateTime.now).order("date DESC")
-      # if params[:search]
-      #   @expenses = @current_user_expenses.search(params[:search]).order("date DESC")
-      #   if @seach_year
-      #     @yearly_expenses = @search_year.search(params[:search]).order("date DESC")
-      #   end
-      # else
-      #   @expenses = @current_user_expenses.where('date >= ? AND date <= ?',
-      #                                      DateTime.now.beginning_of_month,
-      #                              DateTime.now.end_of_month).order("date DESC")
-      # end
       if params[:year] 
         @expenses = @current_user_expenses.year(params[:year]).order("date DESC")
       end
