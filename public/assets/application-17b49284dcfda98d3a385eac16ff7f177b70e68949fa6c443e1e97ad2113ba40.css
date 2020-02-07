@@ -11010,6 +11010,17 @@ div.wish-item:hover {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+/* line 16, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+#new-expenditure-button {
+  border-radius: 45px;
+  background-color: black;
+}
+
+/* line 20, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+.total {
+  font-weight: 700;
+}
 /* line 2, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .add-category-button {
   margin-right: 10px;
@@ -11312,6 +11323,11 @@ li.years a {
   border-width: 11px;
   margin-left: -11px;
 }
+
+/* line 261, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
+.rounded {
+  border-radius: 45px !important;
+}
 /* line 1, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/payments.scss */
 #payment-type {
   margin-top: 25px;
@@ -11330,6 +11346,11 @@ li.years a {
 /* line 12, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/payments.scss */
 #payment-type .unselected {
   display: none;
+}
+/* line 1, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/projections.scss */
+.cash {
+  font-weight: 999;
+  color: #339900;
 }
 /* line 6, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .top-bar.expanded {

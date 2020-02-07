@@ -24078,6 +24078,12 @@ $( document ).on('turbolinks:load', function(){
    $('li.months').click(function(event){
       localStorage.setItem('month', $(this).val())
       $('#month-field').val(localStorage.getItem('month'));
+      if (localStorage.getItem('year') != "") {
+        $('#year-field').val(localStorage.getItem('year'));
+      }
+      else {
+        $('#year-field').val(0);
+      }
       $('#search-form').submit();
       event.preventDefault;
    });
@@ -24086,6 +24092,11 @@ $( document ).on('turbolinks:load', function(){
    $('li.years').click(function(event){
       localStorage.setItem('year', $(this).val())
       $('#year-field').val(localStorage.getItem('year'));
+      if (localStorage.getItem('month') != "") {
+        $('#month-field').val(localStorage.getItem('month'));
+      } else {
+        $('#month-field').val(0);
+      }
       $('#search-form').submit();
       event.preventDefault;
    });
@@ -24107,6 +24118,10 @@ $(document).on("change", "select#category", function(e){
 	});
 
 });
+(function() {
+
+
+}).call(this);
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
