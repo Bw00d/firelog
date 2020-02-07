@@ -20,7 +20,8 @@
         <div class="small-1 columns text-right"><h5><%= link_to fa_icon("times"), e, method: :delete, data: { confirm: 'Are you sure?' }, class: "right delete-expense" %></h5></div>
       </div>
     <% end %>
-    <div class="total ">Total: <span class="right"><%= number_to_currency(total_cash(@projections)) %></span></div>
+    <div class="total ">Total: <span class="right"><%= number_to_currency(total(@projections)) %></span></div>
+    <div class="total ">Cash Total: <span class="right"><%= number_to_currency(total_cash(@projections)) %></span></div>
   </div>
 </div>
 
