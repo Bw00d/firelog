@@ -11016,6 +11016,11 @@ div.wish-item:hover {
   border-radius: 45px;
   background-color: black;
 }
+
+/* line 20, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenditures.scss */
+.total {
+  font-weight: 700;
+}
 /* line 2, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/expenses.scss */
 .add-category-button {
   margin-right: 10px;
@@ -11341,6 +11346,11 @@ li.years a {
 /* line 12, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/payments.scss */
 #payment-type .unselected {
   display: none;
+}
+/* line 1, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/projections.scss */
+.cash {
+  font-weight: 500;
+  color: #339900;
 }
 /* line 6, /Users/bwood/code/rails/5.0/firelog/app/assets/stylesheets/standard-style.css.scss */
 .top-bar.expanded {
