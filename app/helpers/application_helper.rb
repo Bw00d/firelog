@@ -10,4 +10,13 @@ module ApplicationHelper
     array.each { |n| total += n.amount }
     total
   end
+  def total_cash(array)
+    total = 0
+    array.each do |n| 
+      if n.cash?
+        total += n.amount
+      end
+    end
+    total
+  end
 end
