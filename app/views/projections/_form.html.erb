@@ -1,0 +1,48 @@
+<div class="row">
+<div id="hide-expenditure-button" class="button tiny radius secondary">CANCEL</div>
+  
+  <%= form_for @projection do |f| %>
+    <% if @projection.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@projection.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+        <ul>
+        <% @projection.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: "radius", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :amount %>
+      <%= f.text_field :amount, class: "radius", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :due_date %>
+      <% if mobile_device == "mobile" %>
+        <%= f.date_field :due_date, id: "mobile-due-date", class: "radius", required: true %>
+      <% else %>
+        <%= f.text_field :due_date, id: "due-date", class: "radius", required: true %>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= f.label :cash %>
+      <%#= f.text_field :cash, class: "radius", required: true %>
+      <%=  f.check_box :cash, {}, "true", "false" %>
+    </div>
+
+    <%= hidden_field :user_id, value: @user.id %>
+
+    <div class="actions">
+      <%= f.submit 'ADD', class: 'button small radius wide-button success' %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,26 @@
+<div id="expenditures" class="row">
+  <div class="small-12 columns">
+    <div class="row">
+      <div id="new-expenditure-button" class="button small rounded radius">ADD PROJECTION</div>
+    </div>
+    <div id="expenditure-form">
+      <%= render 'form' %>
+    </div>
+    <% @projections.each do |e| %>
+      <div class=" row wish-item">
+        <%= link_to projection_path(e) do %>
+            <div class="small-4 columns"><h5><%= e.description %></h5></div>
+        <% end %>
+        <div class="small-3 columns text-right"><h5><%= e.due_date.try(:strftime, "%b %-d, %Y") %></h5></div>
+        <div class="small-4 columns text-right"><h5><%if e.cash  %>
+          <span class="cash"><%= number_to_currency(e.amount) %></span>
+          <% else %>
+          <%= number_to_currency(e.amount) %><% end %></h5></div>
+
+        <div class="small-1 columns text-right"><h5><%= link_to fa_icon("times"), e, method: :delete, data: { confirm: 'Are you sure?' }, class: "right delete-expense" %></h5></div>
+      </div>
+    <% end %>
+    <div class="total ">Total: <span class="right"><%= number_to_currency(total(@projections)) %></span></div>
+  </div>
+</div>
+

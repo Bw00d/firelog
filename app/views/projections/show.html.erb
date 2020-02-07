@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @projection.due_date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @projection.user_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @projection.description %>
+</p>
+
+<%= link_to 'Edit', edit_projection_path(@projection) %> |
+<%= link_to 'Back', projections_path %>
