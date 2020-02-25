@@ -20,6 +20,14 @@ feature 'Home page' do
   	visit root_path
     expect(page).to have_content 'Get Started'
     expect(page).not_to have_content 'Add'
-end
+    expect(page).not_to have_link 'Charts'
+  end
+
+  scenario 'when visiting the home page signed in' do
+    user = FactoryBot.create(:user)
+    signin(user.email, user.password)
+    visit root_path
+    expect(page).to have_link 'Charts'
+  end
 
 end

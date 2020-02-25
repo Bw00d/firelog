@@ -1,7 +1,7 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:index]
-  before_action :set_expenses, only: [:index]
+  before_action :set_expenses, only: [:index, :charts]
 
   # GET /expenses
   # GET /expenses.json
