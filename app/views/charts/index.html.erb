@@ -24,7 +24,7 @@
 
 <div class="row">
   <div class="small-12 columns small-centered">   
-    <h5><strong>2018</strong></h5>
+    <h5><strong>2018   –   <%= number_to_currency(total_expenses(@expenses_2018)) %></strong></h5>
     
     <% Category.all.each do |c|  %>
       <%= c.description %>: 
@@ -33,7 +33,7 @@
       
     <% end %>
 
-    <h5><strong>2019</strong></h5>
+    <h5><strong>2019   –   <%= number_to_currency(total_expenses(@expenses_2019)) %></strong></h5>
    
     <% Category.all.each do |c|  %>
       <%= c.description %>: 
@@ -41,9 +41,8 @@
 
       
     <% end %>
-    
 
-    <h5><strong>2020</strong></h5>
+    <h5><strong>2020   –   <%= number_to_currency(total_expenses(@expenses_2020)) %></strong></h5>
        
     
     <% Category.all.each do |c|  %>
