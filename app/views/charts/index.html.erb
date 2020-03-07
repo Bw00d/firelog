@@ -17,42 +17,40 @@
   <div class="small-12 columns small-centered">
   <%#= render '/expenses/charts' %>
    
-  <%= column_chart @expenses.group(:date).sum(:amount),
+  <%#= column_chart @expenses.group(:date).sum(:amount),
                                         prefix: "$",decimal: "." %>
   </div>
 </div>
 
 <div class="row">
-  <h5><strong>2018</strong></h5>
   <div class="small-12 columns small-centered">   
-  
-  <% Category.all.each do |c|  %>
-    <p><%= c.description %>: 
-      <%= number_to_currency(sum_category(@expenses_2018, c))  %>
+    <h5><strong>2018</strong></h5>
+    
+    <% Category.all.each do |c|  %>
+      <%= c.description %>: 
+        <%= number_to_currency(sum_category(@expenses_2018, c))  %></br>
 
-    </p>
-  <% end %>
-  </div>
+      
+    <% end %>
 
-  <h5><strong>2019</strong></h5>
-  <div class="small-12 columns small-centered">   
-  
-  <% Category.all.each do |c|  %>
-    <p><%= c.description %>: 
-      <%= number_to_currency(sum_category(@expenses_2019, c))  %>
+    <h5><strong>2019</strong></h5>
+   
+    <% Category.all.each do |c|  %>
+      <%= c.description %>: 
+        <%= number_to_currency(sum_category(@expenses_2019, c))  %></br>
 
-    </p>
-  <% end %>
-  </div>
+      
+    <% end %>
+    
 
-  <h5><strong>2020</strong></h5>
-  <div class="small-12 columns small-centered">   
-  
-  <% Category.all.each do |c|  %>
-    <p><%= c.description %>: 
-      <%= number_to_currency(sum_category(@expenses_2020, c))  %>
+    <h5><strong>2020</strong></h5>
+       
+    
+    <% Category.all.each do |c|  %>
+      <%= c.description %>: 
+        <%= number_to_currency(sum_category(@expenses_2020, c))  %></br>
 
-    </p>
-  <% end %>
+      
+    <% end %>
   </div>
 </div>
