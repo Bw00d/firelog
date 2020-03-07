@@ -1,1 +1,58 @@
 <%= content_for :title, 'Charts' %>
+
+<script type="text/javascript">
+  var d = new Date();
+  var n = d.getFullYear();
+  var set_year = localStorage.getItem('year');
+  if (set_year == "" || set_year === null ) {
+    localStorage.setItem('year', n)
+  }
+  if (localStorage.getItem('month') == "") {
+    localStorage.setItem('month', 0)
+  }
+</script>
+
+
+<div class="row">
+  <div class="small-12 columns small-centered">
+  <%#= render '/expenses/charts' %>
+   
+  <%= column_chart @expenses.group(:date).sum(:amount),
+                                        prefix: "$",decimal: "." %>
+  </div>
+</div>
+
+<div class="row">
+  <h5><strong>2018</strong></h5>
+  <div class="small-12 columns small-centered">   
+  
+  <% Category.all.each do |c|  %>
+    <p><%= c.description %>: 
+      <%= number_to_currency(sum_category(@expenses_2018, c))  %>
+
+    </p>
+  <% end %>
+  </div>
+
+  <h5><strong>2019</strong></h5>
+  <div class="small-12 columns small-centered">   
+  
+  <% Category.all.each do |c|  %>
+    <p><%= c.description %>: 
+      <%= number_to_currency(sum_category(@expenses_2019, c))  %>
+
+    </p>
+  <% end %>
+  </div>
+
+  <h5><strong>2020</strong></h5>
+  <div class="small-12 columns small-centered">   
+  
+  <% Category.all.each do |c|  %>
+    <p><%= c.description %>: 
+      <%= number_to_currency(sum_category(@expenses_2020, c))  %>
+
+    </p>
+  <% end %>
+  </div>
+</div>

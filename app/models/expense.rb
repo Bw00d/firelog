@@ -5,6 +5,7 @@ validates :amount, presence: :true
 has_one :category
 has_one :payment
 
+
 	def category
 		Category.find(self.category_id).description
 	end

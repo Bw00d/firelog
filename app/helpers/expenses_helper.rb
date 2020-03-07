@@ -22,4 +22,6 @@ module ExpensesHelper
 	def get_category(id)
 		Category.find(id)
 	end
+  
+  
 end

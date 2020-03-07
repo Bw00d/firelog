@@ -1,2 +1,3 @@
 class Charts
+  
 end
