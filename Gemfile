@@ -13,6 +13,7 @@ gem 'foundation-datepicker-rails'
 gem "font-awesome-rails"
 gem "selectize-rails"
 gem "chartkick"
+gem 'groupdate'
 gem "paperclip", "~> 6.0.0"
 gem 'aws-sdk-s3'
 gem 'jquery-validation-rails'

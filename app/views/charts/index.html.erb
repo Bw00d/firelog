@@ -47,9 +47,14 @@
     
     <% Category.all.each do |c|  %>
       <%= c.description %>: 
-        <%= number_to_currency(sum_category(@expenses_2020, c))  %></br>
+        <%= number_to_currency(sum_category(@expenses_2020, c)) %></br>
 
       
     <% end %>
+
+    <div class="chart small-12 columns">
+      <h6></h6>
+      <%#= line_chart @expenses_2018 %>
+    </div>
   </div>
 </div>

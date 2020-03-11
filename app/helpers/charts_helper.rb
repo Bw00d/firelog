@@ -33,4 +33,11 @@ module ChartsHelper
     total
   end
 
+  def display_average_expenses_by_category(expenses)
+    Category.all.each do |c|
+      c.description  
+      sum_category(expenses, c)
+    end
+  end
+
 end
