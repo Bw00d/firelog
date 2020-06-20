@@ -23,6 +23,8 @@ $( document ).on('turbolinks:load', function(){
 		  $(this).toggleClass('unselected');
 
 		  $('#category-field').val(value);
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
 		  event.preventDefault();
 		});
 
