@@ -1,4 +1,4 @@
 Chartkick.options = {
-  height: "250px"
-  # colors: ["pink", "#999"]
+  height: "200px",
+  colors: ["apple", "#999"]
 }

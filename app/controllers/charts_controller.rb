@@ -4,8 +4,6 @@ class ChartsController < ApplicationController
       @categories = current_user.categories.order('description ASC')
       @current_user_expenses = current_user.expenses
       @years =  @current_user_expenses.all.select("date").map{ |i| i.date.year }.uniq
-      if !params[:years] then params[:year] = @years.first end
-      if !params[:categories] then params[:categories] = current_user.categories.first end
       @expenses = current_user.expenses.where("extract(year  from date) = ? AND category_id =?", 
                                                 params[:year], params[:category])
       @expenses_by_month = expenses_by_month(@expenses)

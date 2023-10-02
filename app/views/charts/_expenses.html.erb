@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="small-12 columns small-centered">   
+    <h5><strong><%= params[:year] %>   –   <%= number_to_currency(total_expenses(@display_expenses)) %></strong></h5>
+    
+    <% Category.all.each do |c|  %>
+      <%= c.description %>: 
+      <%= number_to_currency(sum_category(@display_expenses, c))  %></br>
+ 
+    <% end %>   
+  </div>
+</div>

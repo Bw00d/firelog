@@ -1,16 +1,15 @@
 
   <div  class="month-chart">
-    <br>
     <div class="chart small-12 columns">
       <% unless params[:category] == "" || params[:category] == nil %>
         <% unless params[:year] == "" || params[:year] == nil %>
           <h4><strong><%= @category.capitalize %> Spending By Month</strong></h4>
 
-          <%= area_chart @expenses_by_month, prefix: "$",decimal: "." %>
+          <%= area_chart @expenses_by_month, prefix: "$",decimal: ".", colors: ["#1d9524", "#999"] %>
 
           <h4><strong><%= @category.capitalize %> Spending By Year</strong></h4>
           
-          <%= column_chart @expenses_by_year, prefix: "$",decimal: "." %>
+          <%= column_chart @expenses_by_year, prefix: "$",decimal: ".", colors: ["#3669cd", "#999"] %>
           <% end %>
       <% else %>
       <h5>Choose a year and a category.</h5>
