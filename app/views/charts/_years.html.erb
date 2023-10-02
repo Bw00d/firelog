@@ -1,0 +1,7 @@
+<div class="row">
+  <ul>
+    <% @years.sort.each do |d| %>
+    <li class="years" value =<%= d %>><%=link_to d, "#", data: d, remote: true %></li>
+    <% end %>
+  </ul>
+</div>

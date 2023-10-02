@@ -40,4 +40,5 @@ module ChartsHelper
     end
   end
 
+
 end

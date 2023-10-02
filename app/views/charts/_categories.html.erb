@@ -1,0 +1,11 @@
+
+<h4><strong>Expenses</strong></h4>
+
+      <div class="row">
+        <ul>
+          <% @categories.sort.each do |d| %>
+            <li class="categories" value =<%= d %>><%=link_to d.description, "#", data: d, remote: true %></li>
+            <span class="hidden-id"><%= d.id %></span>
+          <% end %>
+        </ul>
+      </div>

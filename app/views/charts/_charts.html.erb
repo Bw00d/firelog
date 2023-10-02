@@ -1,0 +1,21 @@
+
+  <div  class="month-chart">
+    <br>
+    <div class="chart small-12 columns">
+      <% unless params[:category] == "" || params[:category] == nil %>
+        <% unless params[:year] == "" || params[:year] == nil %>
+          <h4><strong><%= @category.capitalize %> Spending By Month</strong></h4>
+
+          <%= area_chart @expenses_by_month, prefix: "$",decimal: "." %>
+
+          <h4><strong><%= @category.capitalize %> Spending By Year</strong></h4>
+          
+          <%= column_chart @expenses_by_year, prefix: "$",decimal: "." %>
+          <% end %>
+      <% else %>
+      <h5>Choose a year and a category.</h5>
+      <% end %>
+
+
+    </div>
+  </div>

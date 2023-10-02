@@ -1,30 +1,51 @@
 class ChartsController < ApplicationController
 
   def index
-    # if current_user
-    #   @expenses = current_user.expenses.where('date >= ? AND date <= ?',
-    #                                      DateTime.now.beginning_of_month,
-    #                              DateTime.now.end_of_month).order("date DESC")
-    #   @yearly_expenses = current_user.expenses.where('date >= ? AND date <= ?',
-    #                                             DateTime.now.beginning_of_year,
-    #                                             DateTime.now).order("date DESC")
-    #   if params[:year] 
-    #     @expenses = current_user.expenses.year(params[:year]).order("date DESC")
-    #   end
-    #   if params[:month] 
-    #     @expenses = @expenses.month(params[:month]).order("date DESC")
-    #   end
-    #   unless params[:year] == "" || params[:year] == nil
-    #     @yearly_expenses = current_user.expenses.year(params[:year]).order("date DESC")
-    #   end
-    #   @dates =  @yearly_expenses.all.select("date").map{ |i| i.date.month }.uniq
-    #   @years =  current_user.expenses.all.select("date").map{ |i| i.date.year }.uniq
-    # end
-    @expenses = current_user.expenses
-    # @monthly_expenses = @expenses.month(params[:month]).order("date DESC") if params[:month]
-    @expenses_2018 = @expenses.year(2018).order("date DESC")
-    @expenses_2019 = @expenses.year(2019).order("date DESC")
-    @expenses_2020 = @expenses.year(2020).order("date DESC")
+      @categories = current_user.categories.order('description ASC')
+      @current_user_expenses = current_user.expenses
+      @years =  @current_user_expenses.all.select("date").map{ |i| i.date.year }.uniq
+      if !params[:years] then params[:year] = @years.first end
+      if !params[:categories] then params[:categories] = current_user.categories.first end
+      @expenses = current_user.expenses.where("extract(year  from date) = ? AND category_id =?", 
+                                                params[:year], params[:category])
+      @expenses_by_month = expenses_by_month(@expenses)
+      @expenses_by_year = expenses_by_year(current_user.expenses.where(category_id: params[:category]))
+    
+      if params[:category]
+        @category = Category.find(params[:category]).description  
+      else
+        @category = current_user.categories.first.description
+      end  
 
+    @display_expenses = @expenses.year(params[:year]).order("date DESC")
+
+
+    
+  end
+
+  def expenses_by_month(expenses)
+    summed = [['Jan', 0.00],['Feb', 0.00],['Mar', 0.00],['Apr', 0.00],['May', 0.00],['Jun', 0.00],
+               ['Jul', 0.00],['Aug', 0.00],['Sep', 0.00],['Oct', 0.00],['Nov', 0.00],['Dec', 0.00]]  
+    expenses.each do |e|
+      summed[e.date.month - 1][1] += e.amount
+    end
+    summed
+  end
+  def expenses_by_year(expenses)
+    years =  current_user.expenses.all.select("date").map{ |i| i.date.year }.uniq
+    yearly_expenses = []
+    years.each do |y|
+      yearly_expenses << [y, 0.00]
+    end
+
+    expenses.each do |e|
+      yearly_expenses.each do |y|
+        if e.date.year == y[0]
+          y[1] += e.amount
+        end
+      end
+    end
+    yearly_expenses
   end
 end
+

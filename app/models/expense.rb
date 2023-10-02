@@ -30,4 +30,13 @@ has_one :payment
     where('extract(month from date) = ?', "#{month}")
   end
 
+  # def expense_by_month
+  #   # expenses_by_month = expenses.group_by { |expense|  expense.date.month }
+  #   summed = [['Jan', 0.00],['Feb', 0.00],['Mar', 0.00],['Apr', 0.00],['May', 0.00],['Jun', 0.00],
+  #              ['Jul', 0.00],['Aug', 0.00],['Sep', 0.00],['Oct', 0.00],['Nov', 0.00],['Dec', 0.00]]  
+  #   self.each do |e|
+  #     summed[e.date.month - 1][1] += e.amount
+  #   end
+  #   summed
+  # end
 end

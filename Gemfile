@@ -23,6 +23,7 @@ gem 'foundation-rails', '~> 5.5'
 gem 'high_voltage'
 gem 'pg'
 gem "actionview", ">= 5.0.7.2"
+gem "groupdate"
 
 
 group :development do
@@ -34,6 +35,7 @@ group :development do
   gem 'better_errors'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
+  gem 'pry-rails'
 end
 
 group :development, :test do

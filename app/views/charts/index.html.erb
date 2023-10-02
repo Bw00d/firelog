@@ -15,46 +15,11 @@
 
 <div class="row">
   <div class="small-12 columns small-centered">
-  <%#= render '/expenses/charts' %>
-   
-  <%#= column_chart @expenses.group(:date).sum(:amount),
-                                        prefix: "$",decimal: "." %>
-  </div>
-</div>
+ 
+    <%= render 'categories'  %>
+    <%= render 'years'  %>
+    <%= render 'form' %>
+    <%= render 'charts'  %>
 
-<div class="row">
-  <div class="small-12 columns small-centered">   
-    <h5><strong>2018   –   <%= number_to_currency(total_expenses(@expenses_2018)) %></strong></h5>
-    
-    <% Category.all.each do |c|  %>
-      <%= c.description %>: 
-        <%= number_to_currency(sum_category(@expenses_2018, c))  %></br>
-
-      
-    <% end %>
-
-    <h5><strong>2019   –   <%= number_to_currency(total_expenses(@expenses_2019)) %></strong></h5>
-   
-    <% Category.all.each do |c|  %>
-      <%= c.description %>: 
-        <%= number_to_currency(sum_category(@expenses_2019, c))  %></br>
-
-      
-    <% end %>
-
-    <h5><strong>2020   –   <%= number_to_currency(total_expenses(@expenses_2020)) %></strong></h5>
-       
-    
-    <% Category.all.each do |c|  %>
-      <%= c.description %>: 
-        <%= number_to_currency(sum_category(@expenses_2020, c)) %></br>
-
-      
-    <% end %>
-
-    <div class="chart small-12 columns">
-      <h6></h6>
-      <%#= line_chart @expenses_2018 %>
-    </div>
   </div>
 </div>

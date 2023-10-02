@@ -1,0 +1,11 @@
+<div class="row">
+  <!-- End display categories -->
+    <%= form_tag(charts_path, :method => "get", id: "search-form") do %>
+      <%= hidden_field_tag :year, params[:year], id: "year-field" %>
+      <% unless params[:category] %>
+        <%= hidden_field_tag :category, current_user.categories.first.id, id: "category-field" %>
+      <% else %>
+        <%= hidden_field_tag :category, params[:category], id: "category-field" %>
+      <% end %>
+    <% end %>
+</div>
