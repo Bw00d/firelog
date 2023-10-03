@@ -20,7 +20,9 @@
     <%= render 'years'  %>
     <%= render 'form' %>
     <%= render 'charts'  %>
-    <%= render 'expenses' %>
+    <% unless params[:year] == "" || params[:year] == nil %>
+      <%= render 'expenses' %>
+    <% end %>
 
   </div>
 </div>

@@ -1,6 +1,7 @@
 class ChartsController < ApplicationController
 
   def index
+
       @categories = current_user.categories.order('description ASC')
       @current_user_expenses = current_user.expenses
       @years =  @current_user_expenses.all.select("date").map{ |i| i.date.year }.uniq
@@ -16,8 +17,6 @@ class ChartsController < ApplicationController
       end  
 
     @display_expenses = @expenses.year(params[:year]).order("date DESC")
-
-
     
   end
 
