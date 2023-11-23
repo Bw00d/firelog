@@ -4,6 +4,7 @@
   <li><%= link_to 'Wish List', expenditures_path %></li>
   <% if current_user.expenses.count != 0 %>
     <li><%= link_to 'Charts', charts_path %></li>
+    <li><%= link_to 'Budget', budgets_path %></li>
   <% end %>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
