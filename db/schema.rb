@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20231123192933) do
 
   create_table "budget_items", force: :cascade do |t|
     t.integer "budget_id"
+    t.integer "category_id"
     t.decimal "amount"
     t.string  "description"
   end

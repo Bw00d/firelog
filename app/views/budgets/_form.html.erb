@@ -1,27 +1,26 @@
-<%= form_for(budget) do |f| %>
-  <% if budget.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(budget.errors.count, "error") %> prohibited this budget from being saved:</h2>
 
-      <ul>
-      <% budget.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+
+<div class="row">
+  <div id="hide-show-button" class="button tiny radius secondary">
+    CANCEL
+  </div>
+  
+  <%= form_for(@budget) do |f| %>
+
+    <div class="field">
+      <%= f.label :date %>
+      <% if mobile_device == "mobile" %>
+        <%= f.date_field :date, id: "mobile-date", class: "radius", required: true %>
+      <% else %>
+        <%= f.text_field :date, id: "date", class: "radius", required: true %>
       <% end %>
-      </ul>
+    </div>
+
+
+    <%= f.hidden_field :user_id, value: current_user.id %>
+
+    <div class="actions">
+      <%= f.submit 'ADD', class: 'button small radius wide-button success' %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.date_select :date %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   has_many :categories
   has_many :expenses
-  has_many :projections
+  has_many :projections, dependent: :destroy
+  has_many :budgets, dependent: :destroy
 end

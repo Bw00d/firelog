@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :budgets
+  resources :budgets do
+    resources :budget_items
+  end
   resources :projections
   resources :expenditures
   resources :payments
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :expenses
   resources :charts
+  # resources :budget_items
   root to: 'expenses#index'
   devise_for :users
   resources :users

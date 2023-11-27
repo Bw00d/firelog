@@ -1,0 +1,52 @@
+<div id="budget-item-form" class="row">
+  <div id="hide-budget-item-button" class="button tiny radius secondary">
+    CANCEL
+  </div>
+  <%= form_for [@budget, @budget_item] do |f| %>
+
+    <div class="row form-field">
+
+      <div id="category-buttons" class="small-12 columns">
+        <%= f.label :category_id, "Category" %>
+        <%= f.hidden_field :category_id, id: "category-field", value: @budget_item.category_id %>
+      <div>
+
+      <div class="validation-box">
+        <div class="orange-square">
+          <%= fa_icon('exclamation') %>
+          </div>
+            Please choose a category. <div class="arrow_box"></div>
+      </div> 
+      <div id="add-category-button">
+        <%= link_to "+", budgets_path %>
+        </div>
+          
+        <div>
+        <!-- Begin display categories -->
+        <% @categories.each do |category| %>
+          <div class="category-button">
+            <%= link_to category.description, 'javascript:;' %>
+            <span class="hidden-id"><%= category.id %></span>
+          </div>
+          <% end %>
+        <!-- End display categories -->
+        <div>
+          <br><br>
+    </div>
+    <div class="form-field">
+      
+      <%= f.label :amount, "Amount"  %>
+      <%= f.text_field :amount, class: "radius", required: true %>
+      <%= f.label :description  %>
+      <%= f.text_field :description, class: "radius" %>
+      <%= f.hidden_field :budget_id, value: @budget.id %>
+    </div>
+  </div>
+
+
+    <div class="actions">
+      <%= f.submit 'ADD', class: 'button small rounded wide-button success' %>
+    </div>
+  <% end %>
+</div>
+</div></div></div>

@@ -4,12 +4,17 @@ class BudgetsController < ApplicationController
   # GET /budgets
   # GET /budgets.json
   def index
+    @user = current_user
+    @budgets = @user.budgets.order(:date)
     @budgets = Budget.all
+    @budget = Budget.new
   end
 
   # GET /budgets/1
   # GET /budgets/1.json
   def show
+    @budget_item = BudgetItem.new
+    @categories = current_user.categories.order('description ASC')
   end
 
   # GET /budgets/new
@@ -31,7 +36,7 @@ class BudgetsController < ApplicationController
         format.html { redirect_to @budget, notice: 'Budget was successfully created.' }
         format.json { render :show, status: :created, location: @budget }
       else
-        format.html { render :new }
+        format.html { render :index }
         format.json { render json: @budget.errors, status: :unprocessable_entity }
       end
     end

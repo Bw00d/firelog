@@ -1,14 +1,51 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="small-12 columns">
 
-<p>
-  <strong>Date:</strong>
-  <%= @budget.date %>
-</p>
+    <div class="row">
+      <h4>
+        <strong><%= @budget.date.try(:strftime, "%b, %Y") %> Budget</strong>
+      </h4>
+    </div>
+    <div class="row">
+      <div id="new-budget-item-button" class="button small rounded radius">ADD BUDGET ITEM</div>
+    </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @budget.user_id %>
-</p>
+    <div id="">
+      <%= render 'budget_item_form' %>
+    </div>
 
-<%= link_to 'Edit', edit_budget_path(@budget) %> |
-<%= link_to 'Back', budgets_path %>
+    
+    <div>
+    <table class="tight-table small-12 columns">
+      <thead>
+        <tr>
+          <th width="200" class="small-text show-for-medium-up"></th>
+          <th width="200" class="small-text"></th>
+          <th width="100" class="small-text"></th>
+
+        </tr>
+      </thead>
+
+          <tbody id="expense-table">
+      
+          <% @budget.budget_items.each do |bi| %>
+            <tr>
+          
+              <td><%= bi.category %></td>
+              <td><%= bi.description %></td>
+              <td><%= number_to_currency(bi.amount) %> <%= link_to fa_icon("times"), [@budget, bi], method: :delete, data: { confirm: 'Are you sure?' }, class: "right delete-expense" %></td>
+            </tr>
+          <% end %>
+          <tr>
+              <td><strong>Total:</strong></td>
+              <td></td>
+              <td><strong><%= number_to_currency(total_budget(@budget.budget_items)) %></strong></td>
+            </tr>
+      </tbody>
+    </table>
+    </div>
+
+
+    <%= link_to 'Back', budgets_path %>
+  </div>
+</div>
