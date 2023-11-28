@@ -6,9 +6,6 @@
         <strong><%= @budget.date.try(:strftime, "%b, %Y") %> Budget</strong>
       </h4>
     </div>
-    <div class="row">
-      <div id="new-budget-item-button" class="button small rounded radius">ADD BUDGET ITEM</div>
-    </div>
 
     <div id="">
       <%= render 'budget_item_form' %>
@@ -16,7 +13,7 @@
 
     
     <div>
-    <table class="tight-table small-12 columns">
+    <table class=" small-12 columns">
       <thead>
         <tr>
           <th width="200" class="small-text show-for-medium-up"></th>
@@ -45,6 +42,9 @@
     </table>
     </div>
 
+    <div class="row">
+      <div id="new-budget-item-button" class="button small rounded radius">ADD BUDGET ITEM</div>
+    </div>
 
     <%= link_to 'Back', budgets_path %>
   </div>

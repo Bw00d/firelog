@@ -3,7 +3,7 @@ $(document).on('turbolinks:load', function(){
     $('#budget-form').show();
     $(this).hide();
   });
-  $('#hide-budget-button').click(function() {
+  $('#hide-show-button').click(function() {
     $('#budget-form').hide();
     $('#new-budget-button').show();
   });

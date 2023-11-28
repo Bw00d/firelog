@@ -1,20 +1,20 @@
 <div class="row">
   <div class="small-12 columns">
-    <div class="row">
-      <div id="new-budget-button" class="button small rounded radius">ADD BUDGET</div>
-    </div>
     <div id="budget-form">
       <%= render 'form' %>
     </div>
     <div class="row">
-      
+      <h4><strong>Current Budgets</strong></h4>
       <% @budgets.each do |e| %>
         <div class=" row">
           <%= link_to budget_path(e) do %>
-          <div class=""><h5><%= e.date.try(:strftime, "%b %-d, %Y") %></h5></div>
+          <div class=""><h5><%= e.date.try(:strftime, "%b %-d, %Y") %> Budget</h5></div>
         <% end %>
         </div>
       <% end %>
+    </div>
   </div>
+    <div class="row">
+      <div id="new-budget-button" class="button small rounded radius">ADD BUDGET</div>
+    </div>
 </div>
-
