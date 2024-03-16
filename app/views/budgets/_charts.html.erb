@@ -1,0 +1,23 @@
+<% if current_user %>
+  <div  class="">
+    <div class="month-chart">
+      <%= pie_chart make_pie(@budget.budget_items.group(:category_id).sum(:amount)),
+                                prefix: "$",decimal: ".", donut: true %>
+    </div>
+
+    <div class="chart small-12 columns">
+      <br>
+      <%= column_chart make_pie(@budget.budget_items.group(:category_id).sum(:amount)),
+                                prefix: "$",decimal: "." %>
+    </div>
+
+    <div class="chart small-12 columns">
+      <br>
+      <%= column_chart [
+  { name: 'Budget', data: @budget.budget_items.group(:category_id).sum(:amount) },
+  { name: 'Expenses', data: @budget.budget_items.group(:category_id).sum(:amount) }
+], library: { scales: { yAxes: [{ ticks: { beginAtZero: true } }] } } %>
+
+    
+  </div>
+<% end  %>

@@ -5,7 +5,9 @@ This is an application that I built to track my expenses. I built it to replace 
 
 I am the only one using the app at the moment but it is available to anyone who wishes to use it. It is currently set up for me and the payment icons are ones that I use. I plan to update it so that a user can choose from a number of common icons.
 
-If you would like to contribute to the application feel free to fork it and make pull requests.
+If you would like to contribute to the application feel free to fork it and make pull requests. 
+
+The live app can be found here: [firelog](https://fire-log.herokuapp.com/ "Track your burn rate")
 
 
 -------------
